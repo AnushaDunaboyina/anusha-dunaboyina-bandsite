@@ -1,1 +1,1 @@
-{"version":3,"sources":["bio.scss","bio.css","partials/_variables.scss"],"names":[],"mappings":"AAGA;EACI,sBAAA;ACFJ;;ADKA;EACI,SAAA;ACFJ;;ADOA;EACI,yBEZa;ADQjB","file":"bio.css"}
+{"version":3,"sources":["bio.scss","bio.css","partials/_variables.scss"],"names":[],"mappings":"AAGA;EACI,sBAAA;ACFJ;;ADKA;EACI,SAAA;ACFJ;;ADOA;EACI,yBEZa;EFab,cEXa;ADOjB","file":"bio.css"}
