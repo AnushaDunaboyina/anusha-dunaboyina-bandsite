@@ -1,12 +1,143 @@
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../../assets/Font/NunitoSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../../assets/Font/NunitoSans-Medium.woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../../assets/Font/NunitoSans-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
 }
 
+html, body {
+  font-family: "Nunito Sans";
+}
+
 .header {
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+.header__navigation--list {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.header__navigation--list-link {
+  text-decoration: none;
+  background-color: #323232;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.header__navigation--list-link:hover {
+  font-weight: 700;
+}
+
+.hero__block {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  color: #FFFFFF;
+}
+
+.hero__block-title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 16px;
+}
+
+.about-musicians {
+  padding: 0 16px;
+}
+
+.about-musicians {
+  background-color: red;
+}
+
+.about-musicians__title {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.about-musicians__image-section {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.band-image {
+  height: 160px;
+  width: 100%;
+  margin: 0;
+}
+
+.about-musicians__quote {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  line-height: 22px;
+}
+
+.about-musicians__lead-vocalist {
+  margin-top: 0;
+}
+
+.about-musicians__band-title {
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 24px;
+}
+
+.about-musicians__band-description {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 16px 0;
+}
+
+.photo-gallery {
+  padding: 0 16px;
+  background-color: lightgreen;
+}
+
+.photo-gallery__title {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.photo-gallery__images > img {
+  height: 160px;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.footer {
+  padding: 16px 16px;
   background-color: #323232;
   color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */
