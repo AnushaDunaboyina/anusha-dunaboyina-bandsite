@@ -1,0 +1,19 @@
+// @use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+}
+
+// HEADER
+
+.header {
+    background-color: black;      
+}
+
+
