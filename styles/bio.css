@@ -55,6 +55,11 @@ html, body {
   font-weight: 700;
 }
 
+.header__band-site--logo {
+  height: 20px;
+  width: 120px;
+}
+
 .hero__block {
   background-image: url(../assets/Images/hero-bio.jpg);
   background-size: cover;
@@ -78,7 +83,7 @@ html, body {
 }
 
 .about-musicians {
-  background-color: red;
+  background-color: #FFFFFF;
 }
 
 .about-musicians__title {
@@ -121,23 +126,75 @@ html, body {
 }
 
 .photo-gallery {
-  padding: 0 16px;
-  background-color: lightgreen;
+  padding: 16px;
+  background-color: #FAFAFA;
 }
-
 .photo-gallery__title {
-  padding-top: 24px;
+  padding-top: 8px;
   padding-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
 }
-
-.photo-gallery__images > img {
+.photo-gallery__images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.photo-gallery__images--image {
   height: 160px;
   width: 100%;
-  padding: 8px 0;
 }
 
 .footer {
   padding: 16px 16px;
   background-color: #323232;
   color: #FFFFFF;
+}
+.footer__title {
+  padding-top: 24px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.footer__social-icons {
+  display: flex;
+  gap: 24px;
+}
+.footer__social-icons--image {
+  height: 30px;
+}
+
+.footer__company--details-block {
+  padding: 8px 0;
+}
+
+.footer__company--details {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+}
+.footer__company--details__company--name, .footer__company--details__company--address {
+  font-size: 14px;
+  font-weight: 600;
+}
+.footer__company--details .footer__company--email {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer__bandsite-logo {
+  padding: 24px 0 16px 0;
+}
+.footer__bandsite-logo__bandsite-logo--image {
+  height: 20px;
+  width: 120px;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  font-weight: 400;
 }/*# sourceMappingURL=bio.css.map */

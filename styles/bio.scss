@@ -51,7 +51,12 @@ html, body {
         }
 
     }
-}   
+} 
+
+.header__band-site--logo {
+    height: 20px;
+    width: 120px;
+}
 
 // HERO BLOCK
 
@@ -81,7 +86,7 @@ html, body {
 }
 
 .about-musicians {
-    background-color: red;
+    background-color: $primary-white;
 }
 
 .about-musicians__title {
@@ -91,15 +96,13 @@ html, body {
 
 .about-musicians__image-section {
     font-size: 14px;
-    font-weight: 600 ;
-   
+    font-weight: 600 ;   
 }
 
 .band-image {
     height: 160px;
     width: 100%;
-    margin: 0;
-    
+    margin: 0;    
 }
 
 .about-musicians__quote{
@@ -129,19 +132,26 @@ html, body {
 // PHOTO GALLERY
 
 .photo-gallery {
-    padding: 0 16px;
-    background-color: lightgreen;
-}
+    padding: 16px;
+    background-color: $secondary-white;
 
-.photo-gallery__title{
-    padding-top: 24px;
-    padding-bottom: 16px;
-}
+    &__title{
+        padding-top: 8px;
+        padding-bottom: 16px;
+        font-size: 24px;
+        font-weight: 700;
+    }
 
-.photo-gallery__images >img {
-    height: 160px;
-    width: 100%;
-    padding: 8px 0;
+    &__images {
+        display:flex;
+        flex-direction: column;
+        gap: 16px;
+    
+        &--image {
+            height: 160px;
+            width: 100%;           
+        }
+    }
 }
 
 
@@ -151,6 +161,63 @@ html, body {
     padding: 16px 16px;
     background-color: $primary-black;
     color: $primary-white;
+
+
+    &__title {
+        padding-top: 24px;
+        padding-bottom: 16px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__social-icons {
+        display: flex;
+        gap: 24px;
+    
+        &--image{
+            height: 30px;
+        }
+    }
+}
+
+.footer__company--details-block {
+    padding: 8px 0;
+}
+
+.footer__company--details {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+
+    &__company--name,
+
+    &__company--address{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .footer__company--email {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
 
 
+.footer__bandsite-logo{
+    padding: 24px 0 16px 0;
+
+    &__bandsite-logo--image {
+    height: 20px;
+    width: 120px;
+    
+    }
+}
+
+.footer__copyright {
+    font-size: 14px;
+    font-weight: 400;
+}
