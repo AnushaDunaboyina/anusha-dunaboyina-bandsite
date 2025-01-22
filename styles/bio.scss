@@ -12,50 +12,50 @@ html, body {
 }
 
 
-
-// HEADER and NAVIGATION LIST
+//  HEADER
 
 .header {
-    // font-size: 24px;
-    // font-weight: 700;
-    line-height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 16px;  
-    background-color: $primary-black; 
-    color: $primary-white;
-    
+    background-color: $primary-black;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        padding: 16px 0;
+
+        &--logo {
+        height: 20px;
+        width: 120px;
+        }    
+    }
 
     &__navigation {
+        width: 100%;
+        
         &--list {
-            display: flex;
-            gap: 80px;
-            list-style: none;
-            justify-content: space-between;
             padding: 0;
-            margin:0;
-        }
+            display: flex;
+            justify-content: space-around; 
+            list-style: none;    
+            
+            .header__list {               
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 6px;
+                border-bottom: 5px solid $primary-black;
 
-        &--list-link {
-            text-decoration: none;
-            background-color: $primary-black; 
-            color: $primary-white;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 32px;
-        }   
-        &--list-link:hover {
-            font-weight: 700;;
-        }
-
+                &:hover {
+                    font-weight: bold; 
+                    border-bottom: 5px solid $primary-white;                      
+                }
+              
+                &--link {
+                    text-decoration: none;
+                    color: $primary-white;                      
+                }                        
+            }
+        }        
     }
-} 
-
-.header__band-site--logo {
-    height: 20px;
-    width: 120px;
 }
 
 // HERO BLOCK
