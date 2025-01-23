@@ -16,12 +16,20 @@ html, body {
 
 .header {
     background-color: $primary-black;
+    
 
-    &__title {
+    @include tablet {
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        height: 80px;
+    }
+
+    &__title {   
         display: flex;
         justify-content: center;
-        padding: 16px 0;
-
+        padding: 24px 36px;
+          
         &--logo {
         height: 20px;
         width: 120px;
@@ -30,7 +38,7 @@ html, body {
 
     &__navigation {
         width: 100%;
-        
+               
         &--list {
             padding: 0;
             display: flex;
@@ -43,18 +51,56 @@ html, body {
                 justify-content: center;
                 padding-bottom: 6px;
                 border-bottom: 5px solid $primary-black;
+                
+                @include mobile {
+                    &:hover {
+                        border-bottom: 5px solid $primary-white;                      
+                    }
 
-                &:hover {
-                    font-weight: bold; 
-                    border-bottom: 5px solid $primary-white;                      
+                    &:active {
+                        font-weight: bold;
+                        outline: none;
+                    }
                 }
-              
+
                 &--link {
                     text-decoration: none;
                     color: $primary-white;                      
                 }                        
             }
-        }        
+        } 
+
+        @include tablet {
+            width: 25%;
+            height: 100%;
+                   
+            &--list {
+                width: 100%;              
+                height: 100%;
+                              
+                .header__list {
+                    border-bottom: none;
+                    padding: 0%;
+                    height: 100%;
+                                         
+                    &--link {
+                        height:100%;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 5px solid red;
+
+                        &:hover {
+                            border-bottom: 5px solid $primary-white;                      
+                        }
+        
+                        &:active {
+                            font-weight: bold;
+                            outline: none;                       
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -65,19 +111,35 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 200px;
     display: flex;
     color: $primary-white;
-    // padding: 0 16px;
+    
+    @include mobile {
+        height: 200px;
+    }
+
+    @include tablet {
+        height: 440px;
+    }
+
+    &--title {
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            font-size: 24px;
+            font-weight: 700;
+            padding: 0 16px;
+        }
+
+        @include tablet {
+            padding: 0 36px;
+            font-size: 60px;
+            font-weight: 700;
+        }
+    }
 }
 
-.hero__block-title {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 700;
-    padding: 0 16px;
-}
 
 // ABOUT THE MUSICIANS
 

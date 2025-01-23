@@ -28,10 +28,18 @@ html, body {
 .header {
   background-color: #323232;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+  }
+}
 .header__title {
   display: flex;
   justify-content: center;
-  padding: 16px 0;
+  padding: 24px 36px;
 }
 .header__title--logo {
   height: 20px;
@@ -53,13 +61,46 @@ html, body {
   padding-bottom: 6px;
   border-bottom: 5px solid #323232;
 }
-.header__navigation--list .header__list:hover {
-  font-weight: bold;
-  border-bottom: 5px solid #FFFFFF;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header__navigation--list .header__list:hover {
+    border-bottom: 5px solid #FFFFFF;
+  }
+  .header__navigation--list .header__list:active {
+    font-weight: bold;
+    outline: none;
+  }
 }
 .header__navigation--list .header__list--link {
   text-decoration: none;
   color: #FFFFFF;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__navigation {
+    width: 25%;
+    height: 100%;
+  }
+  .header__navigation--list {
+    width: 100%;
+    height: 100%;
+  }
+  .header__navigation--list .header__list {
+    border-bottom: none;
+    padding: 0%;
+    height: 100%;
+  }
+  .header__navigation--list .header__list--link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid red;
+  }
+  .header__navigation--list .header__list--link:hover {
+    border-bottom: 5px solid #FFFFFF;
+  }
+  .header__navigation--list .header__list--link:active {
+    font-weight: bold;
+    outline: none;
+  }
 }
 
 .hero__block {
@@ -67,17 +108,36 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 200px;
   display: flex;
   color: #FFFFFF;
 }
-
-.hero__block-title {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .hero__block {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__block {
+    height: 440px;
+  }
+}
+.hero__block--title {
   display: flex;
   align-items: center;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 0 16px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .hero__block--title {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__block--title {
+    padding: 0 36px;
+    font-size: 60px;
+    font-weight: 700;
+  }
 }
 
 .about-musicians {
