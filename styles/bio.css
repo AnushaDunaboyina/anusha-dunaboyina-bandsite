@@ -297,6 +297,7 @@ html, body {
 .get-intouch {
   display: flex;
   flex-direction: column;
+  padding-bottom: 16px;
   gap: 14px;
 }
 .get-intouch__title {
@@ -308,16 +309,43 @@ html, body {
   display: flex;
   gap: 30px;
 }
-.get-intouch__social-icons--image- {
+.get-intouch__social-icons--image {
   height: 24px;
 }
 
-.footer__bandsite-logo- {
-  position: absolute;
-  margin-top: 20px;
-  top: 78%;
+.company__details {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  line-height: 18px;
+}
+.company__details--name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.company__details--address {
+  font-size: 14px;
+  font-weight: 400;
+}
+.company__details--email {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 400;
 }
 
-.footer__copyright- {
+.footer__bandsite-logo {
+  height: 20px;
+  width: 120px;
+  position: absolute;
+  margin-top: 20px;
+  top: 85%;
+}
+
+.footer__copyright {
   margin-top: 60px;
+  font-size: 10px;
+  font-weight: 400;
 }/*# sourceMappingURL=bio.css.map */

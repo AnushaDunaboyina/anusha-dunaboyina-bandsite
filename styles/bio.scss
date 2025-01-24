@@ -297,78 +297,6 @@ html, body {
 
 // FOOTER
 
-// footer {
-//     padding: 32px 16px;
-//     background-color: $primary-black;
-//     color: $primary-white;
-
-//     @include tablet {
-//         padding: 48px 36px;
-//     }
-    
-
-
-//     &__title {
-//         font-size: 24px;
-//         font-weight: 700;
-//     }
-
-//     &__social-icons {
-//         display: flex;
-//         gap: 24px;
-    
-//         &--image{
-//             height: 30px;
-//         }
-//     }
-// }
-
-// .footer__company--details-block {
-//     padding: 8px 0;
-// }
-
-// .footer__company--details {
-//     padding: 16px 0;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     height: 160px;
-
-//     &__company--name,
-
-//     &__company--address{
-//         font-size: 14px;
-//         font-weight: 600;
-//     }
-
-//     .footer__company--email {
-//         color: white;
-//         text-decoration: none;
-//         font-size: 14px;
-//         font-weight: 400;
-//     }
-// }
-
-
-// .footer__bandsite-logo{
-//     padding: 24px 0 16px 0;
-
-//     &__bandsite-logo--image {
-//     height: 20px;
-//     width: 120px;
-    
-//     }
-// }
-
-// .footer__copyright {
-//     font-size: 14px;
-//     font-weight: 400;
-// }
-
-
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 .footer {
     background-color: $primary-black;   
     color: $primary-white;
@@ -383,6 +311,7 @@ html, body {
 .get-intouch {
     display:flex;
     flex-direction: column;
+    padding-bottom: 16px;
     gap: 14px;
 
     &__title {
@@ -395,25 +324,49 @@ html, body {
         display: flex;
         gap: 30px;
 
-        &--image- {
+        &--image {
             height: 24px;
         }
+    }  
+}
+
+.company__details {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    line-height: 18px;
+
+    &--name {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    &--address {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &--email {
+        text-decoration: none;
+        color: $primary-white;
+        font-size: 13px;
+        font-weight: 400;
     }
 }
 
 
-
-
-
-.footer__bandsite-logo- {
+.footer__bandsite-logo {
+    height: 20px;
+    width: 120px;
     position: absolute;
     margin-top: 20px; 
-    top: 78%;
+    top: 85%; 
 }
 
-.footer__copyright- {
-
+.footer__copyright {
     margin-top: 60px; 
-   
+    font-size: 10px;
+    font-weight: 400;;
 }
 
