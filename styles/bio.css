@@ -287,65 +287,146 @@ html, body {
   background-color: #323232;
   color: #FFFFFF;
   margin: 0;
-  padding: 24px 16px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    padding: 24px 16px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer {
+    padding: 48px 36px;
+  }
 }
 
-.get-intouch {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 16px;
-  gap: 14px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .get-intouch {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    gap: 14px;
+  }
 }
-.get-intouch__title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .get-intouch {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .get-intouch__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .get-intouch__title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+  }
 }
 .get-intouch__social-icons {
   display: flex;
   gap: 30px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .get-intouch__social-icons {
+    margin-right: 170px;
+  }
+}
 .get-intouch__social-icons--image {
   height: 24px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .get-intouch__social-icons--image {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .company {
+    padding: 48px 0;
+    display: flex;
+    font-size: 13px;
+    font-weight: 300;
+    justify-content: space-between;
+  }
+}
 
 .company__details {
-  padding: 16px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
-  line-height: 18px;
 }
-.company__details--name {
-  font-size: 14px;
-  font-weight: 600;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .company__details {
+    padding: 16px 0;
+    gap: 16px;
+    line-height: 18px;
+  }
 }
-.company__details--address {
-  font-size: 14px;
-  font-weight: 400;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .company__details {
+    gap: 24px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .company__details--name, .company__details--address {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .company__details--name, .company__details--address {
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 .company__details--email {
   text-decoration: none;
   color: #FFFFFF;
-  font-size: 13px;
-  font-weight: 400;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .company__details--email {
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .company__details--email {
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 
 .footer__bandsite-logo {
   height: 20px;
   width: 120px;
-  position: absolute;
-  margin-top: 20px;
-  top: 85%;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__bandsite-logo {
+    position: absolute;
+    margin-top: 20px;
+    top: 85%;
+  }
 }
 
-.footer__copyright {
-  margin-top: 60px;
-  font-size: 10px;
-  font-weight: 400;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__copyright {
+    margin-top: 60px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__copyright {
+    font-size: 14px;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=bio.css.map */
