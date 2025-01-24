@@ -76,7 +76,7 @@ html, body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .header__navigation {
-    width: 25%;
+    width: 30%;
     height: 100%;
   }
   .header__navigation--list {
@@ -92,7 +92,7 @@ html, body {
     height: 100%;
     display: flex;
     align-items: center;
-    border-bottom: 5px solid red;
+    border-bottom: 5px solid #FFFFFF;
   }
   .header__navigation--list .header__list--link:hover {
     border-bottom: 5px solid #FFFFFF;
@@ -140,56 +140,110 @@ html, body {
   }
 }
 
-.about-musicians {
-  padding: 0 16px;
-}
-
-.about-musicians {
+.about-musicians__block {
   background-color: #FFFFFF;
 }
-
-.about-musicians__title {
-  padding-top: 24px;
-  padding-bottom: 16px;
+.about-musicians__block--title {
+  padding: 24px 16px 16px 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians__block--title {
+    padding-left: 36px;
+    font-size: 36px;
+    font-weight: 700;
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
 }
 
-.about-musicians__image-section {
+.about-musicians {
+  padding: 0 16px;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians {
+    padding: 0 100px;
+  }
+}
+.about-musicians__section {
   font-size: 14px;
   font-weight: 600;
+  line-height: 18px;
 }
-
-.band-image {
+.about-musicians__section--band-image {
   height: 160px;
   width: 100%;
   margin: 0;
 }
-
-.about-musicians__quote {
-  margin-top: 16px;
-  margin-bottom: 8px;
-  line-height: 22px;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians__section--band-image {
+    height: 360px;
+  }
 }
-
-.about-musicians__lead-vocalist {
+.about-musicians__section--quote {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians__section--quote {
+    padding-top: 36px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+}
+.about-musicians__section--lead-vocalist {
   margin-top: 0;
 }
-
-.about-musicians__band-title {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians__section--lead-vocalist {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians__Bees-Knees {
+    padding: 36px 0 16px 0;
+  }
+}
+.about-musicians__Bees-Knees--title {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 24px;
 }
-
-.about-musicians__band-description {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians__Bees-Knees--title {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians__Bees-Knees--description {
+    display: flex;
+    gap: 32px;
+  }
+}
+.about-musicians__Bees-Knees--description-paragraph {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
   padding: 16px 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-musicians__Bees-Knees--description-paragraph {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 
 .photo-gallery {
   padding: 16px;
   background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .photo-gallery {
+    padding: 36px;
+  }
 }
 .photo-gallery__title {
   padding-top: 8px;
@@ -197,66 +251,73 @@ html, body {
   font-size: 24px;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .photo-gallery__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
 .photo-gallery__images {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.photo-gallery__images--image {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .photo-gallery__images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+.photo-gallery__images--individual-image {
   height: 160px;
   width: 100%;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .photo-gallery__images--individual-image {
+    height: 120px;
+    width: 210px;
+  }
+}
 
 .footer {
-  padding: 16px 16px;
   background-color: #323232;
   color: #FFFFFF;
-}
-.footer__title {
-  padding-top: 24px;
-  padding-bottom: 16px;
-  font-size: 24px;
-  font-weight: 700;
-}
-.footer__social-icons {
-  display: flex;
-  gap: 24px;
-}
-.footer__social-icons--image {
-  height: 30px;
-}
-
-.footer__company--details-block {
-  padding: 8px 0;
-}
-
-.footer__company--details {
-  padding: 16px 0;
+  margin: 0;
+  padding: 24px 16px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 160px;
-}
-.footer__company--details__company--name, .footer__company--details__company--address {
-  font-size: 14px;
-  font-weight: 600;
-}
-.footer__company--details .footer__company--email {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 400;
 }
 
-.footer__bandsite-logo {
-  padding: 24px 0 16px 0;
+.get-intouch {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
-.footer__bandsite-logo__bandsite-logo--image {
-  height: 20px;
-  width: 120px;
+.get-intouch__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.get-intouch__social-icons {
+  display: flex;
+  gap: 30px;
+}
+.get-intouch__social-icons--image- {
+  height: 24px;
 }
 
-.footer__copyright {
-  font-size: 14px;
-  font-weight: 400;
+.footer__bandsite-logo- {
+  position: absolute;
+  margin-top: 20px;
+  top: 78%;
+}
+
+.footer__copyright- {
+  margin-top: 60px;
 }/*# sourceMappingURL=bio.css.map */
