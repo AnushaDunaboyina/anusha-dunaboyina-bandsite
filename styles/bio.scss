@@ -18,12 +18,18 @@ html, body {
     background-color: $primary-black;
     
 
-    @include tablet {
+    @include tablet-desktop {
         display: flex;
         justify-content:flex-start;
         align-items: center;
         height: 80px;
     }
+
+    @include desktop {
+        padding-left: 84px;
+        height : 100px;
+    }
+    
 
     &__title {   
         display: flex;
@@ -31,8 +37,10 @@ html, body {
         padding: 24px 36px;
           
         &--logo {
-        height: 20px;
-        width: 120px;
+        // height: 20px;
+        // width: 120px;
+        fill: red;
+        // stroke: $primary-white;
         }    
     }
 
@@ -70,13 +78,15 @@ html, body {
             }
         } 
 
-        @include tablet {
+        @include tablet-desktop {
             width: 30%;
+            max-width: 320px;
             height: 100%;
                    
             &--list {
                 width: 100%;              
                 height: 100%;
+                padding: 0 20px;
                               
                 .header__list {
                     border-bottom: none;
@@ -87,7 +97,7 @@ html, body {
                         height:100%;
                         display: flex;
                         align-items: center;
-                        border-bottom: 5px solid $primary-white;
+                        border-bottom: 5px solid $primary-black;
 
                         &:hover {
                             border-bottom: 5px solid $primary-white;                      
@@ -122,6 +132,10 @@ html, body {
         height: 440px;
     }
 
+    @include desktop {
+        height: 640px;
+    }
+
     &--title {
         display: flex;
         align-items: center;
@@ -132,10 +146,14 @@ html, body {
             padding: 0 16px;
         }
 
-        @include tablet {
+        @include tablet-desktop {
             padding: 0 36px;
             font-size: 60px;
             font-weight: 700;
+        }
+
+        @include desktop {
+            padding: 0 120px;
         }
     }
 }
@@ -149,13 +167,19 @@ html, body {
     &--title {
         padding: 24px 16px 16px 16px;
 
-        @include tablet {
+        @include tablet-desktop {
             padding-left: 36px;
             font-size: 36px;
             font-weight:700;
             padding-top : 48px;
-            padding-bottom: 36px;;
+            padding-bottom: 36px;
         }
+
+        @include desktop {
+            padding-left: 120px;
+        }
+
+       
     }
 }
 
@@ -167,6 +191,11 @@ html, body {
     @include tablet{
         padding: 0 100px;
     }
+
+    @include desktop {
+        padding: 0 210px;
+    }
+    
 
     &__section {
         font-size: 14px;
@@ -181,6 +210,10 @@ html, body {
             @include tablet {
                 height:360px;
             }
+
+            @include desktop {
+                height: 420px; 
+            }
         }  
         
         &--quote {
@@ -188,7 +221,7 @@ html, body {
             padding-bottom: 8px;
             line-height: 18px;
 
-            @include tablet {
+            @include tablet-desktop {
                 padding-top: 36px;
                 padding-bottom:16px;
                 font-size: 24px;
@@ -200,7 +233,7 @@ html, body {
         &--lead-vocalist {
             margin-top: 0;
 
-            @include tablet {
+            @include tablet-desktop {
                 font-size: 16px;
             }
         }
@@ -208,7 +241,7 @@ html, body {
 
     &__Bees-Knees {
 
-        @include tablet {
+        @include tablet-desktop {
             padding: 36px 0 16px 0;
         }
 
@@ -217,14 +250,14 @@ html, body {
             font-weight: 500 ;
             padding-top: 24px; 
 
-            @include tablet {
+            @include tablet-desktop {
                 font-size: 24px;
             }
         }
 
         &--description{
 
-            @include tablet {
+            @include tablet-desktop {
                 display: flex;
                 gap: 32px;
             }
@@ -235,7 +268,7 @@ html, body {
                 line-height: 18px;
                 padding: 16px 0;
 
-                @include tablet {
+                @include tablet-desktop {
                     font-size: 14px;
                     line-height: 22px;
                 }
@@ -243,8 +276,6 @@ html, body {
         }
     }
 }
-
-
 
 // PHOTO GALLERY
 
@@ -256,13 +287,17 @@ html, body {
         padding: 36px;
     }
 
+    @include desktop {
+        padding: 36px 120px;
+    }
+
     &__title{
         padding-top: 8px;
         padding-bottom: 16px;
         font-size: 24px;
         font-weight: 700;
 
-        @include tablet {
+        @include tablet-desktop {
             font-size: 36px; 
             line-height: 44px;
             font-weight: 700;
@@ -274,10 +309,10 @@ html, body {
         flex-direction: column;
         gap: 16px;
 
-        @include tablet {
+        @include tablet-desktop {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
             flex-wrap: wrap;
             gap: 24px;
         }
@@ -289,6 +324,11 @@ html, body {
             @include tablet {
                 height: 120px;
                 width: 210px;
+            }
+
+            @include desktop {
+                height: 180px;
+                width: 320px;
             }
         }
     }
@@ -310,6 +350,10 @@ html, body {
     @include tablet {
         padding: 48px 36px;
     }  
+
+    @include desktop {
+        padding: 48px 120px;
+    }
 }
 
 .get-intouch {
@@ -322,10 +366,20 @@ html, body {
     }
    
 
-    @include tablet {
+    @include tablet-desktop {
         display:flex;
-        justify-content:space-between;
+        justify-content:flex-start;
+        gap: 28px;
         align-items:baseline;
+
+        .last-child {
+            margin-left: auto;
+        }
+
+        @include desktop {
+            justify-content: flex-start;
+            gap: 56px;
+        }
     }
    
     
@@ -338,26 +392,23 @@ html, body {
             line-height: 32px;
         }
 
-        @include tablet {
+        @include tablet-desktop {
             font-size: 34px;
             font-weight: 700;
             line-height: 42px;
+           
         }
         
     }
 
     &__social-icons {
-        display: flex;
-        gap: 30px;
-
-        @include tablet {
-            margin-right: 170px;  
-        }
+        display: flex;        
+        gap: 24px;
 
         &--image {
             height: 24px;
 
-            @include tablet {
+            @include tablet-desktop {
                 height: 26px;
                 width: 26px;
             }
@@ -366,12 +417,17 @@ html, body {
 }
 
 .company {
-    @include tablet {
+    @include tablet-desktop {
         padding: 48px 0;
         display: flex;
         font-size: 13px;
         font-weight: 300;        
-        justify-content: space-between;
+        justify-content: flex-start;
+        gap: 28px;
+
+        @include desktop {
+            gap: 62px;
+        }
     }
 }
 
@@ -386,7 +442,7 @@ html, body {
         line-height: 18px;
     }
 
-    @include tablet {
+    @include tablet-desktop {
         gap: 24px;
         line-height: 22px;
     }
@@ -400,7 +456,7 @@ html, body {
             font-weight: 600;
         }
 
-        @include tablet {
+        @include tablet-desktop {
             font-size: 14px;
             font-weight: 600;
         }
@@ -416,7 +472,7 @@ html, body {
             font-weight: 400;
         }
 
-        @include tablet {
+        @include tablet-desktop {
             font-size: 14px;
             font-weight: 600;
         }
@@ -443,7 +499,7 @@ html, body {
         font-weight: 400;
     }
 
-    @include tablet {
+    @include tablet-desktop {
         font-size: 14px;
         font-weight: 400;
     }

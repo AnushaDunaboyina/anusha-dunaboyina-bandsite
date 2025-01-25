@@ -28,12 +28,18 @@ html, body {
 .header {
   background-color: #323232;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 80px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    padding-left: 84px;
+    height: 100px;
   }
 }
 .header__title {
@@ -42,8 +48,7 @@ html, body {
   padding: 24px 36px;
 }
 .header__title--logo {
-  height: 20px;
-  width: 120px;
+  fill: red;
 }
 .header__navigation {
   width: 100%;
@@ -74,14 +79,16 @@ html, body {
   text-decoration: none;
   color: #FFFFFF;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .header__navigation {
     width: 30%;
+    max-width: 320px;
     height: 100%;
   }
   .header__navigation--list {
     width: 100%;
     height: 100%;
+    padding: 0 20px;
   }
   .header__navigation--list .header__list {
     border-bottom: none;
@@ -92,7 +99,7 @@ html, body {
     height: 100%;
     display: flex;
     align-items: center;
-    border-bottom: 5px solid #FFFFFF;
+    border-bottom: 5px solid #323232;
   }
   .header__navigation--list .header__list--link:hover {
     border-bottom: 5px solid #FFFFFF;
@@ -121,6 +128,11 @@ html, body {
     height: 440px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__block {
+    height: 640px;
+  }
+}
 .hero__block--title {
   display: flex;
   align-items: center;
@@ -132,11 +144,16 @@ html, body {
     padding: 0 16px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .hero__block--title {
     padding: 0 36px;
     font-size: 60px;
     font-weight: 700;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__block--title {
+    padding: 0 120px;
   }
 }
 
@@ -146,13 +163,18 @@ html, body {
 .about-musicians__block--title {
   padding: 24px 16px 16px 16px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .about-musicians__block--title {
     padding-left: 36px;
     font-size: 36px;
     font-weight: 700;
     padding-top: 48px;
     padding-bottom: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musicians__block--title {
+    padding-left: 120px;
   }
 }
 
@@ -163,6 +185,11 @@ html, body {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about-musicians {
     padding: 0 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musicians {
+    padding: 0 210px;
   }
 }
 .about-musicians__section {
@@ -180,12 +207,17 @@ html, body {
     height: 360px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about-musicians__section--band-image {
+    height: 420px;
+  }
+}
 .about-musicians__section--quote {
   padding-top: 16px;
   padding-bottom: 8px;
   line-height: 18px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .about-musicians__section--quote {
     padding-top: 36px;
     padding-bottom: 16px;
@@ -197,12 +229,12 @@ html, body {
 .about-musicians__section--lead-vocalist {
   margin-top: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .about-musicians__section--lead-vocalist {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .about-musicians__Bees-Knees {
     padding: 36px 0 16px 0;
   }
@@ -212,12 +244,12 @@ html, body {
   font-weight: 500;
   padding-top: 24px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .about-musicians__Bees-Knees--title {
     font-size: 24px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .about-musicians__Bees-Knees--description {
     display: flex;
     gap: 32px;
@@ -229,7 +261,7 @@ html, body {
   line-height: 18px;
   padding: 16px 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .about-musicians__Bees-Knees--description-paragraph {
     font-size: 14px;
     line-height: 22px;
@@ -245,13 +277,18 @@ html, body {
     padding: 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .photo-gallery {
+    padding: 36px 120px;
+  }
+}
 .photo-gallery__title {
   padding-top: 8px;
   padding-bottom: 16px;
   font-size: 24px;
   font-weight: 700;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .photo-gallery__title {
     font-size: 36px;
     line-height: 44px;
@@ -263,11 +300,11 @@ html, body {
   flex-direction: column;
   gap: 16px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .photo-gallery__images {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 24px;
   }
@@ -280,6 +317,12 @@ html, body {
   .photo-gallery__images--individual-image {
     height: 120px;
     width: 210px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery__images--individual-image {
+    height: 180px;
+    width: 320px;
   }
 }
 
@@ -299,6 +342,11 @@ html, body {
     padding: 48px 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 48px 120px;
+  }
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .get-intouch {
@@ -308,11 +356,21 @@ html, body {
     gap: 14px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .get-intouch {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 28px;
     align-items: baseline;
+  }
+  .get-intouch .last-child {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .get-intouch {
+    justify-content: flex-start;
+    gap: 56px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -322,7 +380,7 @@ html, body {
     line-height: 32px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .get-intouch__title {
     font-size: 34px;
     font-weight: 700;
@@ -331,30 +389,31 @@ html, body {
 }
 .get-intouch__social-icons {
   display: flex;
-  gap: 30px;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .get-intouch__social-icons {
-    margin-right: 170px;
-  }
+  gap: 24px;
 }
 .get-intouch__social-icons--image {
   height: 24px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .get-intouch__social-icons--image {
     height: 26px;
     width: 26px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .company {
     padding: 48px 0;
     display: flex;
     font-size: 13px;
     font-weight: 300;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 28px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .company {
+    gap: 62px;
   }
 }
 
@@ -370,7 +429,7 @@ html, body {
     line-height: 18px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .company__details {
     gap: 24px;
     line-height: 22px;
@@ -382,7 +441,7 @@ html, body {
     font-weight: 600;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .company__details--name, .company__details--address {
     font-size: 14px;
     font-weight: 600;
@@ -398,7 +457,7 @@ html, body {
     font-weight: 400;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .company__details--email {
     font-size: 14px;
     font-weight: 600;
@@ -424,7 +483,7 @@ html, body {
     font-weight: 400;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .footer__copyright {
     font-size: 14px;
     font-weight: 400;
