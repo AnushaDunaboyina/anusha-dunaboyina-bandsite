@@ -1,6 +1,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
-@use "./partials/fonts";
+@use "./partials/font-face";
+@use "./partials/fonts" as *;
 
 * {
     box-sizing: border-box;
@@ -20,6 +21,7 @@ html, body {
 
     @include tablet-desktop {
         display: flex;
+        flex-wrap: wrap;
         justify-content:flex-start;
         align-items: center;
         height: 80px;
@@ -147,15 +149,13 @@ html, body {
         z-index: 2;
 
         @include mobile {
-            font-size: 24px;
-            font-weight: 700;
+            @include font-large-mobile;
             padding: 0 16px;
         }
 
         @include tablet-desktop {
             padding: 0 36px;
-            font-size: 60px;
-            font-weight: 700;
+            @include font-extra-large-tab-desktop;
         }
 
         @include desktop {
@@ -172,11 +172,11 @@ html, body {
 
     &--title {
         padding: 24px 16px 16px 16px;
+        @include font-extra-large-mobile;
 
         @include tablet-desktop {
+            @include font-large-tab-desktop;
             padding-left: 36px;
-            font-size: 36px;
-            font-weight:700;
             padding-top : 48px;
             padding-bottom: 36px;
         }
@@ -204,8 +204,7 @@ html, body {
     
 
     &__section {
-        font-size: 14px;
-        font-weight: 600; 
+        @include font-medium-mobile; 
         line-height: 18px;
               
         &--band-image {
@@ -228,10 +227,9 @@ html, body {
             line-height: 18px;
 
             @include tablet-desktop {
+                @include font-medium-tab-desktop;
                 padding-top: 36px;
-                padding-bottom:16px;
-                font-size: 24px;
-                font-weight: 600; 
+                padding-bottom:16px; 
                 line-height: 32px;
             }
         }
@@ -252,8 +250,7 @@ html, body {
         }
 
         &--title{
-            font-size: 16px;
-            font-weight: 500 ;
+            @include font-large-mobile; 
             padding-top: 24px; 
 
             @include tablet-desktop {
@@ -269,13 +266,12 @@ html, body {
             }
 
             &-paragraph {
-                font-size: 13px;
-                font-weight: 400;
+                @include font-small-mobile;
                 line-height: 18px;
                 padding: 16px 0;
 
                 @include tablet-desktop {
-                    font-size: 14px;
+                    @include font-small-tab-desktop;
                     line-height: 22px;
                 }
             }
@@ -298,15 +294,13 @@ html, body {
     }
 
     &__title{
+        @include font-extra-large-mobile;
         padding-top: 8px;
         padding-bottom: 16px;
-        font-size: 24px;
-        font-weight: 700;
 
         @include tablet-desktop {
-            font-size: 36px; 
+            @include font-large-tab-desktop;
             line-height: 44px;
-            font-weight: 700;
         }
     }
 
@@ -393,13 +387,12 @@ html, body {
     &__title {
 
         @include mobile {
-            font-size: 24px;
-            font-weight: 700;
+            @include font-extra-large-mobile;
             line-height: 32px;
         }
 
         @include tablet-desktop {
-            font-size: 34px;
+            font-size: 32px;
             font-weight: 700;
             line-height: 42px;
            
@@ -425,9 +418,7 @@ html, body {
 .company {
     @include tablet-desktop {
         padding: 48px 0;
-        display: flex;
-        font-size: 13px;
-        font-weight: 300;        
+        display: flex;       
         justify-content: flex-start;
         gap: 28px;
 
@@ -458,13 +449,11 @@ html, body {
     &--address {
 
         @include mobile{
-            font-size: 14px;
-            font-weight: 600;
+            @include font-medium-mobile;
         }
 
         @include tablet-desktop {
-            font-size: 14px;
-            font-weight: 600;
+            @include font-medium-mobile;
         }
         
     }
@@ -474,13 +463,11 @@ html, body {
         color: $primary-white;
 
         @include mobile{
-            font-size: 13px;
-            font-weight: 400;
+            @include font-small-mobile;
         }
 
         @include tablet-desktop {
-            font-size: 14px;
-            font-weight: 600;
+            @include font-medium-mobile;
         }
     }
 }
@@ -500,16 +487,13 @@ html, body {
 .footer__copyright {
 
     @include mobile{
+        @include font-extra-small-mobile;
         margin-top: 60px; 
-        font-size: 10px;
-        font-weight: 400;
     }
 
     @include tablet-desktop {
-        font-size: 14px;
-        font-weight: 400;
-    }
-    
+        @include font-small-tab-desktop;
+    }    
 }
 
 

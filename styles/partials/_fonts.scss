@@ -1,20 +1,64 @@
 
+// Fonts styles for Tablet and desktop
 
-@font-face {
-    font-family: 'Nunito Sans';
-    src: url('../../assets/Font/NunitoSans-Regular.woff');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Nunito Sans';
-    src: url('../../assets/Font/NunitoSans-Medium.woff');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Nunito Sans';
-    src: url('../../assets/Font/NunitoSans-Bold.woff');
+@mixin font-extra-large-tab-desktop {
+    font-size: 60px ;
     font-weight: 700;
-    font-style: normal;
 }
+@mixin font-large-tab-desktop {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+@mixin font-medium-tab-desktop {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@mixin font-small-tab-desktop {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@mixin font-small-bold-tab-desktop {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+
+// Font styles for Mobile
+
+@mixin font-extra-large-mobile {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+@mixin font-large-mobile {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin font-medium-mobile {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@mixin font-small-mobile {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+@mixin font-small-bold-mobile {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@mixin font-extra-small-mobile {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+
+
