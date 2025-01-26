@@ -372,20 +372,22 @@ html, body {
         gap: 0.875rem;
     }
    
-
-    // @include tablet-desktop {
-    //     display:flex;
-    //     justify-content:flex-start;
-    //     gap: 1.75rem;
-    //     align-items:baseline;
-
     @include tablet-desktop {
+        display:flex;
         align-items:baseline;
 
         @include tablet {
-            display:flex;
-            justify-content: space-between;
-            gap:  3.75vw;
+          
+            justify-content: space-between; 
+            
+            .get-intouch__title,
+            .get-intouch__social-icons {
+                flex: 1;            
+            }
+    
+            .get-intouch__social-icons {
+                margin-right: 100px;
+            }             
         }
 
         .last-child {
@@ -394,12 +396,10 @@ html, body {
 
         @include desktop {
             justify-content: flex-start;
-            gap: 3.5rem;
+            gap: 4.1rem;
         }
     }
-   
-    
-    
+       
     &__title {
 
         @include mobile {

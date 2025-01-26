@@ -377,14 +377,20 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .get-intouch {
+    display: flex;
     align-items: baseline;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1279px) {
   .get-intouch {
-    display: flex;
     justify-content: space-between;
-    gap: 3.75vw;
+  }
+  .get-intouch .get-intouch__title,
+  .get-intouch .get-intouch__social-icons {
+    flex: 1;
+  }
+  .get-intouch .get-intouch__social-icons {
+    margin-right: 100px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -395,7 +401,7 @@ html, body {
 @media screen and (min-width: 768px) and (min-width: 1280px) {
   .get-intouch {
     justify-content: flex-start;
-    gap: 3.5rem;
+    gap: 4.1rem;
   }
 }
 @media screen and (max-width: 767px) {
