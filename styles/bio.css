@@ -64,7 +64,7 @@ html, body {
   padding-bottom: 6px;
   border-bottom: 5px solid #323232;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .header__navigation--list .header__list:hover {
     border-bottom: 5px solid #FFFFFF;
   }
@@ -117,7 +117,7 @@ html, body {
   display: flex;
   color: #FFFFFF;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .hero__block {
     height: 200px;
   }
@@ -147,7 +147,7 @@ html, body {
   align-items: center;
   z-index: 2;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .hero__block--title {
     font-size: 16px;
     font-weight: 500;
@@ -325,6 +325,7 @@ html, body {
 .photo-gallery__images--individual-image {
   height: 160px;
   width: 100%;
+  transition: 1s ease;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__images--individual-image {
@@ -338,13 +339,17 @@ html, body {
     width: 320px;
   }
 }
+.photo-gallery__images--individual-image:hover {
+  transform: scale(0.9);
+  transition: 0.3s ease;
+}
 
 .footer {
   background-color: #323232;
   color: #FFFFFF;
   margin: 0;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer {
     padding: 24px 16px;
     position: relative;
@@ -361,7 +366,7 @@ html, body {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .get-intouch {
     display: flex;
     flex-direction: column;
@@ -386,7 +391,7 @@ html, body {
     gap: 56px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .get-intouch__title {
     font-size: 24px;
     font-weight: 700;
@@ -406,12 +411,16 @@ html, body {
 }
 .get-intouch__social-icons--image {
   height: 24px;
+  transition: transform 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   .get-intouch__social-icons--image {
     height: 26px;
     width: 26px;
   }
+}
+.get-intouch__social-icons--image:hover {
+  transform: scale(1.25);
 }
 
 @media screen and (min-width: 768px) {
@@ -433,7 +442,7 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .company__details {
     padding: 16px 0;
     gap: 16px;
@@ -446,7 +455,7 @@ html, body {
     line-height: 22px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .company__details--name, .company__details--address {
     font-size: 14px;
     font-weight: 600;
@@ -462,7 +471,7 @@ html, body {
   text-decoration: none;
   color: #FFFFFF;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .company__details--email {
     font-size: 13px;
     font-weight: 400;
@@ -474,12 +483,15 @@ html, body {
     font-weight: 600;
   }
 }
+.company__details--email:hover {
+  text-decoration: underline;
+}
 
 .footer__bandsite-logo {
   height: 20px;
   width: 120px;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer__bandsite-logo {
     position: absolute;
     margin-top: 20px;
@@ -487,7 +499,7 @@ html, body {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer__copyright {
     font-size: 10px;
     font-weight: 400;

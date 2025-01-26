@@ -319,7 +319,8 @@ html, body {
     
         &--individual-image {
             height: 160px;
-            width: 100%;  
+            width: 100%;
+            transition: 1s ease;  
             
             @include tablet {
                 height: 120px;
@@ -330,6 +331,11 @@ html, body {
                 height: 180px;
                 width: 320px;
             }
+        }
+
+        &--individual-image:hover {
+           transform: scale(0.9);
+           transition: 0.3s ease;
         }
     }
 }
@@ -406,11 +412,16 @@ html, body {
 
         &--image {
             height: 24px;
+            transition: transform 0.3s ease;
 
             @include tablet-desktop {
                 height: 26px;
                 width: 26px;
             }
+        }
+
+        &--image:hover {
+            transform: scale(1.25)
         }
     }  
 }
@@ -469,6 +480,10 @@ html, body {
         @include tablet-desktop {
             @include font-medium-mobile;
         }
+    }
+
+    &--email:hover {
+        text-decoration: underline;
     }
 }
 
