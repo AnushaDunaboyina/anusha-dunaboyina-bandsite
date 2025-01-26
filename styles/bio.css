@@ -385,11 +385,10 @@ html, body {
   .get-intouch {
     justify-content: space-between;
   }
-  .get-intouch .get-intouch__title,
-  .get-intouch .get-intouch__social-icons {
+  .get-intouch__title, .get-intouch__social-icons {
     flex: 1;
   }
-  .get-intouch .get-intouch__social-icons {
+  .get-intouch__social-icons {
     margin-right: 100px;
   }
 }

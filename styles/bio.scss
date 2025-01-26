@@ -380,12 +380,12 @@ html, body {
           
             justify-content: space-between; 
             
-            .get-intouch__title,
-            .get-intouch__social-icons {
+            &__title,
+            &__social-icons {
                 flex: 1;            
             }
     
-            .get-intouch__social-icons {
+            &__social-icons {
                 margin-right: 100px;
             }             
         }
@@ -410,8 +410,7 @@ html, body {
         @include tablet-desktop {
             font-size: 2rem;
             font-weight: 700;
-            line-height: 2.625rem;
-           
+            line-height: 2.625rem;           
         }
         
     }
@@ -436,19 +435,6 @@ html, body {
     }  
 }
 
-// .company {
-//     @include tablet-desktop {
-//         padding: 3rem 0;
-//         display: flex;       
-//         justify-content: flex-start;
-//         gap: 1.75rem;
-
-//         @include desktop {
-//             gap: 3.875rem;
-//         }
-//     }
-// }
-
 .company {
     @include tablet-desktop {
         padding: 3rem 0;
@@ -456,10 +442,8 @@ html, body {
         @include tablet{
             display: flex;       
             justify-content: space-between;
-            // gap: 1.75rem;
         }
        
-
         @include desktop {
         display: flex;       
         justify-content: flex-start;
@@ -484,7 +468,6 @@ html, body {
         line-height: 1.375rem;
     }
     
-
     &--name,
     &--address {
 
@@ -494,8 +477,7 @@ html, body {
 
         @include tablet-desktop {
             @include font-medium-mobile;
-        }
-        
+        }        
     }
 
     &--email {
