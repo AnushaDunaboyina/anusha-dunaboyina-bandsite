@@ -18,6 +18,7 @@
 }
 * {
   box-sizing: border-box;
+  padding: 0;
   margin: 0;
 }
 
@@ -131,6 +132,9 @@ html, body {
   height: 300px;
   padding: 36px 16px;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media screen and (max-width: 767px) {
   .hero__heading {
@@ -138,14 +142,60 @@ html, body {
     font-weight: 700;
   }
   .hero__sub-section {
-    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
+    font-size: 24px;
     font-weight: 700;
   }
-  .hero__sub-section--heading {
-    padding: 14px 0;
+  .hero__sub-section--audio {
+    height: 100px;
+    width: 100%;
   }
 }
-.hero__audio {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero {
+    height: 400px;
+    padding: 42px 32px;
+  }
+  .hero__heading {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .hero__sub-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 42px;
+    font-weight: 600;
+    gap: 42px;
+  }
+  .hero__sub-section--heading {
+    padding-right: 240px;
+  }
+  .hero__sub-section--audio {
+    height: 120px;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 600px;
+    padding: 13rem 7.5rem;
+  }
+  .hero__sub-section {
+    font-size: 46px;
+    font-weight: 700;
+    display: flex;
+    gap: 130px;
+  }
+  .hero__sub-section--audio {
+    height: 140px;
+    width: 75%;
+  }
+}
+.hero__sub-section--audio {
   border-radius: 5px;
 }
 

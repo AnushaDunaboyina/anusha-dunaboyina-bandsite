@@ -6,6 +6,7 @@
 
 * {
     box-sizing: border-box;
+    padding:0;
     margin:0;
 }
 
@@ -137,6 +138,10 @@ html, body {
     height: 300px;
     padding: 36px 16px;
     color: $primary-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 
     @include mobile {
         &__heading {
@@ -145,18 +150,70 @@ html, body {
         }
     
         &__sub-section {
-            font-size: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            gap: 22px;
+            font-size: 24px;
             font-weight: 700;
 
-            &--heading {
-                padding: 14px 0;
+            &--audio {
+                height: 100px;
+                width: 100%;
             }
-            // padding-top: 16px;
+           
         }
     } 
+
+    @include tablet {
+        height: 400px;
+        padding: 42px 32px;
+
+        &__heading {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        &__sub-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 42px;
+            font-weight: 600;           
+            gap: 42px;
+
+            &--heading {
+                padding-right: 240px;
+            }
+
+            &--audio {
+                height: 120px;
+                width: 55%;
+            }
+        }
+    }
+
+    @include desktop {
+        height: 600px;
+        padding: 13rem 7.5rem;
+
+        &__sub-section {
+            font-size: 46px;
+            font-weight:700;
+            display: flex;
+            gap: 130px;
+
+            &--audio {
+                height: 140px;
+                width: 75%;
+            }
+        }
+    }
     
-    &__audio {
+    &__sub-section--audio {
         border-radius: 5px;
+
     }
 }
 
