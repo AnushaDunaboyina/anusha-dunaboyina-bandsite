@@ -1,0 +1,353 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/font-face";
+@use "./partials/fonts" as *;
+
+
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
+html, body {
+    font-family: 'Nunito Sans';  
+    font-size: 1rem;
+}
+
+//  HEADER
+
+.header {
+    background-color: $primary-black;
+    
+
+    @include tablet-desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        align-items: center;
+        height: 5rem;
+    }
+
+    @include desktop {
+        padding-left: 5.25rem;
+        height : 6.25rem;
+    }
+    
+
+    &__title {   
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 2.25rem;
+    }
+
+    &__navigation {
+        width: 100%;
+               
+        &--list {
+            padding: 0;
+            display: flex;
+            justify-content: space-around; 
+            list-style: none;    
+            
+            .header__list {               
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 0.375rem;
+                border-bottom: 0.313rem solid $primary-black;
+                
+                @include mobile {
+                    &:hover {
+                        border-bottom: 0.313rem solid $primary-white;                      
+                    }
+
+                    &:active {
+                        font-weight: bold;
+                        outline: none;
+                    }
+                }
+
+                &--link {
+                    text-decoration: none;
+                    color: $primary-white;                      
+                }                        
+            }
+
+            .header__list--show {
+                border-bottom: 0.313rem solid $primary-white; 
+
+                &-link {
+                    text-decoration: none;
+                    color: $primary-white;
+                    font-weight : bold;
+                }
+            }
+        } 
+
+        @include tablet-desktop {
+            width: 30%;
+            max-width: 20rem;
+            height: 100%;
+                   
+            &--list {
+                width: 100%;              
+                height: 100%;
+                padding: 0 1.25rem;
+                              
+                .header__list {
+                    border-bottom: none;
+                    padding: 0%;
+                    height: 100%;
+                                         
+                    &--link {
+                        height:100%;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 0.313rem solid $primary-black;
+
+                        &:hover {
+                            border-bottom: 0.313rem solid $primary-white;                      
+                        }
+        
+                        &:active {
+                            font-weight: bold;
+                            outline: none;                       
+                        }
+                    }
+
+                    &--show-link {
+                        height:100%;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 0.313rem solid $primary-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// HERO BLOCK
+
+.hero {
+    background-image: url("../assets/Images/hero-shows.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 36px 16px;
+    color: $primary-white;
+
+    @include mobile {
+        &__heading {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    
+        &__sub-section {
+            font-size: 26px;
+            font-weight: 700;
+
+            &--heading {
+                padding: 14px 0;
+            }
+            // padding-top: 16px;
+        }
+    } 
+    
+    &__audio {
+        border-radius: 5px;
+    }
+}
+
+// SHOWS BLOCK
+
+.shows {
+    padding: 28px 16px 8px 16px; 
+
+    &__title {
+        font-size: 32px;
+    }
+}
+
+
+
+// FOOTER
+
+.footer {
+    background-color: $primary-black;   
+    color: $primary-white;
+    margin: 0;
+    
+    @include mobile {
+        padding: 1.5rem 1rem;    
+        position: relative;
+    }
+
+    @include tablet {
+        padding: 3rem 2.25rem;
+    }  
+
+    @include desktop {
+        padding: 3rem 7.5rem;
+    }
+}
+
+.get-intouch {
+
+    @include mobile {
+        display:flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        gap: 0.875rem;
+    }
+   
+    @include tablet-desktop {
+        display:flex;
+        align-items:baseline;
+
+        @include tablet {
+          
+            justify-content: space-between; 
+            
+            &__title,
+            &__social-icons {
+                flex: 1;            
+            }
+    
+            &__social-icons {
+                margin-right: 100px;
+            }             
+        }
+
+        .last-child {
+            margin-left: auto;
+        }
+
+        @include desktop {
+            justify-content: flex-start;
+            gap: 4.1rem;
+        }
+    }
+       
+    &__title {
+
+        @include mobile {
+            @include font-extra-large-mobile;
+            line-height: 2rem;
+        }
+
+        @include tablet-desktop {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2.625rem;           
+        }
+        
+    }
+
+    &__social-icons {
+        display: flex;        
+        gap: 1.5rem;
+
+        &--image {
+            height: 1.5rem;
+            transition: transform 0.3s ease;
+
+            @include tablet-desktop {
+                height: 1.625rem;
+                width: 1.625rem;
+            }
+        }
+
+        &--image:hover {
+            transform: scale(1.25)
+        }
+    }  
+}
+
+.company {
+    @include tablet-desktop {
+        padding: 3rem 0;
+
+        @include tablet{
+            display: flex;       
+            justify-content: space-between;
+        }
+       
+        @include desktop {
+        display: flex;       
+        justify-content: flex-start;
+            gap: 3.875rem;
+        }
+    }
+}
+
+.company__details {   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobile {
+        padding: 1rem 0;
+        gap: 1rem;
+        line-height: 1.125rem;
+    }
+
+    @include tablet-desktop {
+        gap: 1.5rem;
+        line-height: 1.375rem;
+    }
+    
+    &--name,
+    &--address {
+
+        @include mobile{
+            @include font-medium-mobile;
+        }
+
+        @include tablet-desktop {
+            @include font-medium-mobile;
+        }        
+    }
+
+    &--email {
+        text-decoration: none;
+        color: $primary-white;
+
+        @include mobile{
+            @include font-small-mobile;
+        }
+
+        @include tablet-desktop {
+            @include font-medium-mobile;
+        }
+    }
+
+    &--email:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer__bandsite-logo {
+    height: 1.25rem;
+    width: 7.5rem;
+
+    @include mobile {
+        position: absolute;
+        margin-top: 1.25rem; 
+        top: 85%; 
+    }
+    
+}
+
+.footer__copyright {
+
+    @include mobile{
+        @include font-extra-small-mobile;
+        margin-top: 3.75rem; 
+    }
+
+    @include tablet-desktop {
+        @include font-small-tab-desktop;
+    }    
+}
