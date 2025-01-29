@@ -351,47 +351,64 @@ html, body {
     &--flex {
         display: flex;
         gap: 16px;
+        align-items: flex-start;       
+    }
 
-        &__image {
-           margin-top : auto;
+    &__image {
+        .comment-section__avatar {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-top: 22px;
+
         }
     }
 
     &__form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+        flex: 1;
 
         .comment-section__field {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            align-items: start;
+            margin-bottom: 15px;
+
+            .comment-section__label {
+                display: block;
+                font-size: 13px;
+                font-weight: 500;
+                color: $primary-silver;
+                margin-bottom: 5px;
+            }
+
+            .comment-section__input,
+            .comment-section__textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid $secondary-silver;
+                border-radius: 4px;
+                font-size: 13px;
+                color: $primary-black;
+                background-color: $secondary-white;
+            }
+
+            .comment-section__textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
         }
 
-        .comment-section__input,
-        .coment-section__textarea,
         .comment-section__button {
             width: 100%;
-            border:0;
-            // outline: none;
-            box-shadow: none;
-            // border-radius: 5%;
-            outline: 1px solid $secondary-silver;
-        }
+            background-color: $primary-black;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
 
-        // .comment-section__input,
-        // .coment-section__textarea {
-        //     outline: 0.5px thin $secondary-silver;
-        // }
-       
-    }
-  
-    &__avatar {
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
+            &:hover {
+                background-color: $secondary-black;
+            }
+        }
     }
 }
 
