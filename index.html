@@ -92,24 +92,29 @@
 
             <h2 class="comment-section__title">Join the Conversation</h2>
 
-            <div class="comment-section__form">
-                <div class="comment-section__field comment-section__field--name">
-                    <label class="comment-section__label" for="name">NAME</label>
-                    <input class="comment-section__input" type="text" name="name" placeholder="Enter your name">
-                </div>
-
-                <div class="comment-section__field comment-section__field--comment">
-                    <label class="comment-section__label" for="comment">COMMENT</label>
-                    <textarea class="coment-section__textarea" id="comment" placeholder="Add a new comment"></textarea>
-                </div>
+            <div class="comment-section--flex">
 
                 <div class="comment-section__image">
                     <img class="comment-section__avatar" src="./assets/Images/Mohan-muruge.jpg" alt="Avatar">
                 </div>
 
-                <button class="comment-section__button" type="submit">COMMENT</button>
+                <div class="comment-section__form">
+                    <div class="comment-section__field comment-section__field--name">
+                        <label class="comment-section__label" for="name">NAME</label>
+                        <input class="comment-section__input" type="text" name="name" placeholder="Enter your name">
+                    </div>
 
-            </div>
+                    <div class="comment-section__field comment-section__field--comment">
+                        <label class="comment-section__label" for="comment">COMMENT</label>
+                        <textarea class="coment-section__textarea" id="comment" placeholder="Add a new comment"></textarea>
+                    </div>
+
+                    <div>
+                        <button class="comment-section__button" type="submit">COMMENT</button>
+                    </div>               
+                </div>
+
+        </div>
         </section>
 
     </main>

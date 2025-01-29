@@ -337,6 +337,47 @@ html, body {
   transition: 0.3s ease;
 }
 
+.comment-section {
+  padding: 16px;
+}
+.comment-section__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+.comment-section--flex {
+  display: flex;
+  gap: 16px;
+}
+.comment-section--flex__image {
+  margin-top: auto;
+}
+.comment-section__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.comment-section__form .comment-section__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: start;
+}
+.comment-section__form .comment-section__input,
+.comment-section__form .coment-section__textarea,
+.comment-section__form .comment-section__button {
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+  outline: 1px solid #E1E1E1;
+}
+.comment-section__avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
 .footer {
   background-color: #323232;
   color: #FFFFFF;

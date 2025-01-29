@@ -340,6 +340,60 @@ html, body {
 
 // COMMENT SECTION
 
+.comment-section {
+    padding: 16px;
+
+    &__title {
+        @include font-extra-large-mobile;
+        padding-bottom: 1rem;
+    }
+
+    &--flex {
+        display: flex;
+        gap: 16px;
+
+        &__image {
+           margin-top : auto;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .comment-section__field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: start;
+        }
+
+        .comment-section__input,
+        .coment-section__textarea,
+        .comment-section__button {
+            width: 100%;
+            border:0;
+            // outline: none;
+            box-shadow: none;
+            // border-radius: 5%;
+            outline: 1px solid $secondary-silver;
+        }
+
+        // .comment-section__input,
+        // .coment-section__textarea {
+        //     outline: 0.5px thin $secondary-silver;
+        // }
+       
+    }
+  
+    &__avatar {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+}
 
 // FOOTER
 
