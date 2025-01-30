@@ -345,13 +345,14 @@ html, body {
 
     &__title {
         @include font-extra-large-mobile;
-        padding-bottom: 1rem;
+        // padding-bottom: 1rem;
     }
 
     &--flex {
         display: flex;
         gap: 16px;
-        align-items: flex-start;       
+        align-items: flex-start; 
+        padding: 16px 0;;      
     }
 
     &__image {
@@ -409,6 +410,61 @@ html, body {
                 background-color: $secondary-black;
             }
         }
+    }
+}
+
+
+// Three Comments Section
+
+.comment-container {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px; 
+    border-top: 2px solid $secondary-silver; 
+
+    &:last-child {
+        border-bottom: 2px solid $secondary-silver;
+    }
+    
+    .comment__avatar {
+        background-color: $secondary-silver;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        flex: none;
+    }
+
+    .comment__details {
+        display:flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .comment__name-date {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            .comment__name {
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            .comment__date {
+                font-size: 14px;
+                font-weight: 500;
+                color: $primary-silver;
+            }
+        }
+
+        .comment__paragraph-section {
+
+            .comment__paragraph {
+                font-size: 14px;
+                font-weight: 400;
+                color: $secondary-black;
+                
+            }
+        }      
     }
 }
 
