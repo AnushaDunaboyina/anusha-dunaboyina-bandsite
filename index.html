@@ -98,7 +98,7 @@
                     <img class="comment-section__avatar" src="./assets/Images/Mohan-muruge.jpg" alt="Avatar">
                 </div>
 
-                <form class="comment-section__form">
+                <form id= "comment-form" class="comment-section__form">
                     <div class="comment-section__field comment-section__field--name">
                         <label class="comment-section__label" for="name">NAME</label>
                         <input class="comment-section__input" type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -113,6 +113,11 @@
                         <button class="comment-section__button" type="submit">COMMENT</button>
                     </div>               
                 </form>
+
+            </div>
+
+            <div id="comments-container" class="comments-block">
+
 
             </div>
         </section>
@@ -177,3 +182,22 @@
     
 </body>
 </html>
+
+
+
+<div class="comment-container">
+
+    <div class="comment__avatar"></div>
+
+    <div class="comment-details">    <!-- section contains Name, Date and comment -->
+        <div class="comment__name-date">
+            <h3 class="comment__name">User name</h3>
+            <p class="comment__date">date</p>
+        </div>
+
+        <div class="comment__paragraph-section">
+            <p class="comment__paragraph">This is a new comment</p>
+        </div>
+    </div>
+
+</div>
