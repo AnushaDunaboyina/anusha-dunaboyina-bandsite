@@ -59,7 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
             buyTicketsButton.textContent = 'BUY TICKETS';
             buttonDiv.appendChild(buyTicketsButton);
 
+            
 
+
+            // Creating Click eventListener
             showDiv.addEventListener('click', () => {
                 const selected = document.querySelector('.show-selected');
 
@@ -70,7 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 showDiv.classList.add('show-selected')
             });
 
-            showsContainer.appendChild(showDiv);
+            showsContainer.appendChild(showDiv);    
+            
+            // adding divider after each show 
+            const dividerDiv = document.createElement('div');
+            dividerDiv.className = 'show-divider';
+            showsContainer.appendChild(dividerDiv);
+
+            
         });
     }
 
