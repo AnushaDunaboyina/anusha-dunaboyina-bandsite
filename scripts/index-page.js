@@ -1,11 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const commentsContainer = document.getElementById('comments-container');
-    const commentForm = document.getElementById('comment-form');
+    const commentContainer = document.getElementById('comment-container');
+    const form = document.getElementById('comment-form');
     const nameInput = document.getElementById('name');
     const commentInput = document.getElementById('comment');
 
-    const defaultComments = [
+
+    // Default three comments array
+    const comments = [
         {
             name: 'Victor Pinto',
             date: '11/02/2023',
@@ -28,100 +30,99 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
     
-    // Creating Elements for Comments Container
+    // Function to create a single comment element
     
     function createCommentElement(comment) {
     
-        const commentContainer = document.createElement('div');
-        commentContainer.className = 'comment-container';
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment-container';
     
-        const userAvatar = document.createElement('div');
-        userAvatar.className = 'comment__avatar';  
-        commentContainer.appendChild(userAvatar)
+        const avatarDiv = document.createElement('div');
+        avatarDiv.className = 'comment__avatar';  
+        commentDiv.appendChild(avatarDiv)
     
-        const commentDetails = document.createElement('div');
-        commentDetails.className = 'comment__details';    
-        commentContainer.appendChild(commentDetails);
+        const detailsDiv = document.createElement('div');
+        detailsDiv.className = 'comment__details';    
+        commentDiv.appendChild(detailsDiv);
     
-        const commentNameDateSection = document.createElement('div');
-        commentNameDateSection.className = 'comment__name-date';    
-        commentDetails.appendChild(commentNameDateSection);
+        const nameDateDiv = document.createElement('div');
+        nameDateDiv.className = 'comment__name-date';    
+        detailsDiv.appendChild(nameDateDiv);
     
-        const userName = document.createElement('h3');
-        userName.className = 'comment__name';
-        userName.textContent = comment.name;  
-        commentNameDateSection.appendChild(userName);
+        const nameEl = document.createElement('h3');
+        nameEl.className = 'comment__name';
+        nameEl.textContent = comment.name;  
+        nameDateDiv.appendChild(nameEl);
     
-        const commentDate = document.createElement('p');
-        commentDate.className = 'comment__date';
-        commentDate.textContent = formatDate(comment.date);    
-        commentNameDateSection.appendChild(commentDate);
+        const dateEl = document.createElement('p');
+        dateEl.className = 'comment__date';
+        dateEl.textContent = formatDate(comment.date);    
+        nameDateDiv.appendChild(dateEl);
     
-        const commentParagraphSection = document.createElement('div');
-        commentParagraphSection.className = 'comment__paragraph-section';  
-        commentDetails.appendChild(commentParagraphSection);
+        const paragraphDiv = document.createElement('div');
+        paragraphDiv.className = 'comment__paragraph-section';  
+        detailsDiv.appendChild(paragraphDiv);
     
-        const commentParagraph = document.createElement('p');
-        commentParagraph.className = 'comment__paragraph';
-        commentParagraph.textContent = comment.comment   
-        commentParagraphSection.appendChild(commentParagraph);
+        const commentPara = document.createElement('p');
+        commentPara.className = 'comment__paragraph';
+        commentPara.textContent = comment.comment   
+        paragraphDiv.appendChild(commentPara);
     
-        return commentContainer;
+        return commentDiv;
     
     }
     
-    // Format the Date function
+    // Function to format Date
     
     function formatDate(dateString) {
         const date = new Date(dateString);
         return `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}`;
     }
     
-    // Rendering Comments function
+    // Function to render comments
     
-    function renderComments(comments) {
-        commentsContainer.innerHTML = '';
-    
-        comments.forEach(function(comment) {
+    function renderComments() {
+        commentContainer.innerHTML = '';
+            
+        comments.forEach((comment) => {                        // loop through comments and add them to container
             const commentElement = createCommentElement(comment);
-            commentsContainer.appendChild(commentElement);
+            commentContainer.appendChild(commentElement);
         });
     }
     
     
-    //  Render default comments
+    //  Initial render
     
-    renderComments(defaultComments);
+    renderComments();
     
-    commentForm.addEventListener('submit', function(event) {
+    form.addEventListener('submit', (event) => {               // form submission event
         event.preventDefault();
-    
-        const name = nameInput.value.trim();
-        const commentText = commentInput.value.trim();
            
-        if ( name && commentText) {
-            const newComment = {
-                name: name,
-                date: new Date().toISOString().split('T')[0],
-                comment: commentText,
-                avatar: ''
-            };
-    
-            defaultComments.unshift(newComment);
-    
-            if (defaultComments.length > 3) {
-                defaultComments.pop();
-            }
-    
-            renderComments(defaultComments);
-    
-            // nameInput.value = '';
-            // commentInput.value = '';
+        const name = nameInput.value.trim();                   // adding name and comment to form    
+        const commentText = commentInput.value.trim();
 
-            event.target.querySelector('#name').value = '';
-            event.target.querySelector('#comment').value = '';
-
+        if (name.length === 0 || commentText.length === 0) {   // input validation
+            alert("Please fill out fields.");
+            return;
         }
+        
+        const newComment = {                                   // Creating new comment object
+            name: name,
+            date: new Date().toISOString().split('T')[0],
+            comment: commentText,
+            avatar: ''
+        };
+
+        comments.unshift(newComment);                         // adding new comment to top of the array
+
+        if (comments.length > 3) {                            // removing old comment
+            comments.pop();
+        }
+
+        renderComments();                                     // Re-render the comments
+
+        event.target.querySelector('#name').value = '';       // Clearing the form
+        event.target.querySelector('#comment').value = '';       
     });
 });
 
