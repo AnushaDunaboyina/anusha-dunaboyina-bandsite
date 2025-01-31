@@ -1,0 +1,184 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './font-face';
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+html, body {
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;  
+    font-size: 1rem;
+}
+
+
+// FOOTER
+
+.footer {
+    background-color: $primary-black;   
+    color: $primary-white;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    
+    @include mobile {
+        position: relative;
+    }
+       
+    @include tablet {
+        padding: 3rem 2.25rem;
+    }  
+
+    @include desktop {
+        padding: 3rem 7.5rem;
+    }
+
+
+    &__contact {
+        display:flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        gap: 0.875rem;
+          
+        @include tablet-desktop {
+            padding-bottom: 0;
+            gap: 0;
+            display:flex;
+            flex-direction: row;
+            align-items:baseline;
+    
+            @include tablet {         
+                justify-content: space-between; 
+                
+                .footer__contact-title,
+                .footer__social-icons {
+                    flex: 1;            
+                }
+        
+                .footer__social-icons {
+                    margin-right: 100px;
+                }             
+            }
+    
+            .last-child {
+                margin-left: auto;
+            }
+    
+            @include desktop {
+                justify-content: flex-start;
+                gap: 4.1rem;
+            }
+        }
+           
+        &-title {      
+            @include font-extra-large-mobile;
+            line-height: 2rem;
+            
+            @include tablet-desktop {
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 2.625rem;           
+            }        
+        }
+    
+        .footer__social-icons {
+            display: flex;        
+            gap: 1.5rem;
+    
+            .footer__icon {
+                height: 1.5rem;
+                transition: transform 0.3s ease;
+    
+                @include tablet-desktop {
+                    height: 1.625rem;
+                    width: 1.625rem;
+                }
+            }
+    
+            .footer__icon:hover {
+                transform: scale(1.25)
+            }
+        }  
+    }
+    
+    &__company {
+        @include tablet-desktop {
+            padding: 3rem 0;
+    
+            @include tablet{
+                display: flex;       
+                justify-content: space-between;
+            }
+           
+            @include desktop {
+                display: flex;       
+                justify-content: flex-start;
+                gap: 3.875rem;
+            }
+        }
+
+        &-details {   
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            padding: 1rem 0;
+            gap: 1rem;
+            line-height: 1.125rem;
+           
+            @include tablet-desktop {
+                padding: 0;
+                gap: 1.5rem;
+                line-height: 1.375rem;
+            }
+            
+            .footer__company-name,
+            .footer__company-address {        
+                @include font-medium-mobile;
+               
+                @include tablet-desktop {
+                    @include font-medium-mobile;
+                }        
+            }
+        
+            .footer__company-email {
+                text-decoration: none;
+                color: $primary-white;      
+                @include font-small-mobile;
+                
+                @include tablet-desktop {
+                    @include font-medium-mobile;
+                }
+            }
+        
+            .footer__company-email:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__logo {
+        height: 1.25rem;
+        width: 7.5rem; 
+        @include mobile {
+            position: absolute;
+            margin-top: 1.25rem; 
+            top: 85%;  
+        }      
+    }
+    
+    &__copyright {  
+    
+        @include mobile {
+            @include font-extra-small-mobile;
+            margin-top: 3.75rem; 
+        }
+          
+        @include tablet-desktop {
+            @include font-small-tab-desktop;
+        }    
+    }
+    
+}   
+    
