@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}`;
     }
     
-    // Rendering Comments funtion
+    // Rendering Comments function
     
     function renderComments(comments) {
         commentsContainer.innerHTML = '';
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         const name = nameInput.value.trim();
         const commentText = commentInput.value.trim();
-    
+           
         if ( name && commentText) {
             const newComment = {
                 name: name,
@@ -115,8 +115,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
             renderComments(defaultComments);
     
-            nameInput.value = '';
-            commentInput.value = '';
+            // nameInput.value = '';
+            // commentInput.value = '';
+
+            event.target.querySelector('#name').value = '';
+            event.target.querySelector('#comment').value = '';
+
         }
     });
 });
