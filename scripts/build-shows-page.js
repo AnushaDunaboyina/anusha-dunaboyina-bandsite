@@ -49,10 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
             locationSpan.textContent = show.location;
             showDiv.appendChild(locationSpan);
 
+            // Button : Buy Tickets
+            const buttonDiv = document.createElement('div')
+            buttonDiv.className = 'show__button-section';
+            showDiv.appendChild(buttonDiv);
+
+            const buyTicketsButton = document.createElement('button');
+            buyTicketsButton.className = 'show__button'
+            buyTicketsButton.textContent = 'BUY TICKETS';
+            buttonDiv.appendChild(buyTicketsButton);
 
 
+            showDiv.addEventListener('click', () => {
+                const selected = document.querySelector('.show-selected');
+
+                if (selected) {
+                    selected.classList.remove('show-selected');
+                }
+
+                showDiv.classList.add('show-selected')
+            });
+
+            showsContainer.appendChild(showDiv);
         });
     }
 
-
+    renderShows();
 })
