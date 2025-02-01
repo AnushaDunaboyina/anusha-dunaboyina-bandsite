@@ -1,7 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const showsContainer = document.getElementById('shows-container');
+    console.log('showsContainer:', showsContainer);
 
+    // Array for Shows data
     const shows = [
         { date: 'Mon Sept 09 2024', venue:'Ronald Lane', location: 'San Francisco, CA'},
         { date: 'Tue Sept 17 2024', venue: 'Pier 3 East', location: 'San Francisco, CA'},
@@ -13,31 +15,58 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('show:', shows);
 
     // Function to create the headings row (for tablet and desktop view)
-
     function createHeadingsRow() {
         const headingsRowDiv = document.createElement('div');
         headingsRowDiv.className = 'show-headings';
 
-        const dateHeadingDiv = document.createElemnt('div');
+        const dateHeadingDiv = document.createElement('div');
         dateHeadingDiv.className = 'show-heading__date';
         dateHeadingDiv.textContent = 'DATE';
         headingsRowDiv.appendChild(dateHeadingDiv);
 
-        const venueHeadingDiv = document.createElemnt('div');
+        const venueHeadingDiv = document.createElement('div');
         venueHeadingDiv.className = 'show-heading__venue';
         venueHeadingDiv.textContent = 'VENUE';
         headingsRowDiv.appendChild(venueHeadingDiv);
 
-        const locationHeadingDiv = document.createElemnt('div');
+        const locationHeadingDiv = document.createElement('div');
         locationHeadingDiv.className = 'show-heading__location';
         locationHeadingDiv.textContent = 'LOCATION';
         headingsRowDiv.appendChild(locationHeadingDiv);
 
-        const buttonHeadingDiv = document.createElemnt('div');
+        const buttonHeadingDiv = document.createElement('div');
         buttonHeadingDiv.className = 'show-heading__button';
         buttonHeadingDiv.textContent = '';
         headingsRowDiv.appendChild(buttonHeadingDiv);
+
+        console.log('headingsRow created:', headingsRowDiv);
+        return headingsRowDiv;
     }
+
+    // Function to render the shows
+    function renderShows() {
+        showsContainer.innerHTML = '';   // Clear the container
+
+        // If condition to check the sreenwidth matching tablet and desktop then adding headings row
+        const mediaQuery = '(min-width: 768px)' ;
+        const mediaQueryList = window.matchMedia(mediaQuery);
+        const tabletDesktopView = mediaQueryList.matches;
+        console.log(tabletDesktopView);
+
+        if(tabletDesktopView) {
+            const headingsRow = createHeadingsRow();
+            showsContainer.appendChild(headingsRow);
+            console.log('headingsRow appended to showsContainer');
+        }
+
+        // Loop through each show : create its elements
+        shows.forEach((show, index) => {
+            
+        })
+    }
+
+    renderShows();
+
 });
     // Function to create Heading row (for tablet and desktop view)
     // function createHeadingsRow() {
