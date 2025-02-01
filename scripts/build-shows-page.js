@@ -15,10 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderShows() {
         showsContainer.innerHTML = '';
 
-        shows.forEach(show => {
+        // loop through each show and create its corresponding elements
+
+        shows.forEach((show, index) => {
+
             const showDiv = document.createElement('div');
             showDiv.className = 'show';
 
+            const dateSection = document.createElement('div');
+            dateSection.className = 'show__section';
+            showDiv.appendChild(dateSection);
+        
             const dateLabelDiv = document.createElement('div');
             dateLabelDiv.className = 'show__label';
             dateLabelDiv.textContent = 'DATE'
@@ -29,6 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             dateSpan.textContent = show.date;
             showDiv.appendChild(dateSpan);
 
+            const venueSection = document.createElement('div');
+            venueSection.className = 'show__section';
+            showDiv.appendChild(venueSection);
+
             const venueLabelDiv = document.createElement('div');
             venueLabelDiv.className = 'show__label';
             venueLabelDiv.textContent = 'VENUE'
@@ -38,6 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
             venueSpan.className = 'show__venue show-item--flex-row';
             venueSpan.textContent = show.venue;
             showDiv.appendChild(venueSpan);
+
+            const locationSection = document.createElement('div');
+            locationSection.className = 'show__section';
+            showDiv.appendChild(locationSection);
 
             const locationLabelDiv = document.createElement('div');
             locationLabelDiv.className = 'show__label';
@@ -64,10 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Creating Click eventListener
             showDiv.addEventListener('click', () => {
-                const selected = document.querySelector('.show-selected');
+                const selectedShow = document.querySelector('.show-selected');
 
-                if (selected) {
-                    selected.classList.remove('show-selected');
+                if (selectedShow) {
+                    selectedShow.classList.remove('show-selected');
                 }
 
                 showDiv.classList.add('show-selected')
