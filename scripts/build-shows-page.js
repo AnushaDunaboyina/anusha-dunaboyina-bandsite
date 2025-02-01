@@ -46,13 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to render the shows
     function renderShows() {
         showsContainer.innerHTML = '';   // Clear the container
+        console.log('showsContainer cleared');
 
         // If condition to check the sreenwidth matching tablet and desktop then adding headings row
         const mediaQuery = '(min-width: 768px)' ;
         const mediaQueryList = window.matchMedia(mediaQuery);
         const tabletDesktopView = mediaQueryList.matches;
         console.log(tabletDesktopView);
-
         if(tabletDesktopView) {
             const headingsRow = createHeadingsRow();
             showsContainer.appendChild(headingsRow);
@@ -61,7 +61,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Loop through each show : create its elements
         shows.forEach((show, index) => {
+            console.log('Rendering show:', show);
+
+            const showDiv = document.createElement('div');
+            showDiv.className = 'show';
             
+            // DATE section
+            const dateSectionDiv = document.createElement('div');
+            dateSectionDiv.className = 'show__section';
+            showDiv.appendChild(dateSectionDiv);
+
+            const dateLabelDiv = document.createElement('div');
+            dateLabelDiv.className = 'show__label';
+            dateLabelDiv.textContent = 'DATE';
+            dateSectionDiv.appendChild(dateLabelDiv);
+
+            const dateValueSpan = document.createElement('span');
+            dateValueSpan.className = 'show__date';
+            dateValueSpan.textContent = 'show.date';
+            dateSectionDiv.appendChild(dateValueSpan);
+
+            // VENUE Section
+            const venueSectionDiv = document.createElement('div');
+            venueSectionDiv.className = 'show__section';
+            showDiv.appendChild(venueSectionDiv);
+
+            const venueLabelDiv = document.createElement('div');
+            venueLabelDiv.className = 'show__label';
+            venueLabelDiv.textContent = 'VENUE';
+            venueSectionDiv.appendChild(venueLabelDiv);
+
+            const venueValueSpan = document.createElement('span');
+            venueValueSpan.className = 'show__venue';
+            venueValueSpan.textContent = 'show.venue';
+            venueSectionDiv.appendChild(venueValueSpan);
+
+            // LOCATION Section
+            const locationSectionDiv = document.createElement('div');
+            locationSectionDiv.className = 'show__section';
+            showDiv.appendChild(locationSectionDiv);
+
+            const locationLabelDiv = document.createElement('div');
+            locationLabelDiv.className = 'show__label';
+            locationLabelDiv.textContent = 'LOCATION';
+            locationSectionDiv.appendChild(locationLabelDiv);
+
+            const locationValueSpan = document.createElement('span');
+            locationValueSpan.className = 'show__location';
+            locationValueSpan.textContent = 'show.location';
+            locationSectionDiv.appendChild(locationValueSpan);
+
+            // BUTTON Section
+            const buttonSectionDiv = document.createElement('div');
+            buttonSectionDiv.className = 'show__section';
+            showDiv.appendChild(buttonSectionDiv);
+
+            const buttonTextDiv = document.createElement('div');
+            buttonTextDiv.className = 'show__label';
+            buttonTextDiv.textContent = 'BUTTON';
+            buttonSectionDiv.appendChild(buttonTextDiv);
+
+
+            // Add click events to highlight the selected show
         })
     }
 
