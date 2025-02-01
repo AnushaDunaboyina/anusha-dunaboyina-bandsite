@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { date: 'Wed Dec 18 2024', venue: 'Press Club', location: 'San Francisco, CA'}
     ];
 
+    // Function to create Heading row (for tablet and desktop view)
 
     function renderShows() {
         showsContainer.innerHTML = '';
