@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showDiv.appendChild(dateLabelDiv);
 
             const dateSpan = document.createElement('span');
-            dateSpan.className = 'show__date';
+            dateSpan.className = 'show__date show-item--flex-row';
             dateSpan.textContent = show.date;
             showDiv.appendChild(dateSpan);
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showDiv.appendChild(venueLabelDiv);
 
             const venueSpan = document.createElement('span');
-            venueSpan.className = 'show__venue';
+            venueSpan.className = 'show__venue show-item--flex-row';
             venueSpan.textContent = show.venue;
             showDiv.appendChild(venueSpan);
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showDiv.appendChild(locationLabelDiv);
 
             const locationSpan = document.createElement('span');
-            locationSpan.className = 'show__location';
+            locationSpan.className = 'show__location show-item--flex-row';
             locationSpan.textContent = show.location;
             showDiv.appendChild(locationSpan);
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showDiv.appendChild(buttonDiv);
 
             const buyTicketsButton = document.createElement('button');
-            buyTicketsButton.className = 'show__button'
+            buyTicketsButton.className = 'show__button show-item--flex-row'
             buyTicketsButton.textContent = 'BUY TICKETS';
             buttonDiv.appendChild(buyTicketsButton);
 
@@ -79,8 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const dividerDiv = document.createElement('div');
             dividerDiv.className = 'show-divider';
             showsContainer.appendChild(dividerDiv);
-
-            
+           
         });
     }
 

@@ -222,12 +222,47 @@ main {
 
         .show {
             padding: 16px;
+
+            // @include tablet-desktop {
+            //     display: flex;
+            //     flex-direction: row;
+            // }
+
+            .show__label {
+                color: $primary-silver;
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+            .show__date {
+                color: $primary-black;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            .show__venue, .show__location {
+                color: $secondary-black;
+                font-size: 15px;
+                font-weight: normal;
+            }
+
+            .show__button {
+                width: 100%;
+                padding: 10px 0;
+                color: $primary-white;
+                background-color: $primary-black;
+                border-radius: 4px;
+                border: none;
+                font-size: 13px;
+                font-weight: 600;;
+
+            }
         }
         
     }
 
     .show-divider {
-        border-top: 2px solid $primary-silver;
+        border-top: 2px solid $primary-silver;        
     }
     
 }
