@@ -161,6 +161,8 @@
         @include font-extra-large-mobile;
 
         &--audio {
+            overflow: hidden;
+            border: none;
             height: 100px;
             width: 100%;
         }

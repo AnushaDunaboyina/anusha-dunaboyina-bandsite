@@ -336,6 +336,8 @@ html, body {
   font-weight: 700;
 }
 .hero__sub-section--audio {
+  overflow: hidden;
+  border: none;
   height: 100px;
   width: 100%;
 }
