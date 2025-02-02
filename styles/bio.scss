@@ -9,7 +9,6 @@
 .header {
     background-color: $primary-black;
     
-
     @include tablet-desktop {
         display: flex;
         flex-wrap: wrap;
@@ -23,7 +22,6 @@
         height : 6.25rem;
     }
     
-
     &__title {   
         display: flex;
         justify-content: center;
@@ -152,7 +150,6 @@
     }
 }
 
-
 // ABOUT THE MUSICIANS
 
 .about-musicians {
@@ -264,9 +261,6 @@
     }
 }
 
-
-
-
 // PHOTO GALLERY
 
 .photo-gallery {
@@ -377,7 +371,6 @@
                 height: 3.125rem;
                 width: 3.125rem;
             }
-
         }
     }
 
@@ -440,7 +433,6 @@
                 align-self: flex-end;
             }
             
-
             .comment-section__button {
                 width: 100%;
                 background-color: $primary-black;
@@ -533,15 +525,12 @@
 
                         @include tablet-desktop {
                             line-height: 1.5rem;
-                        }
-                        
+                        }                       
                     }
                 }      
             }
         }
-
     }
-
 }
 
 

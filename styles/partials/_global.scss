@@ -14,7 +14,6 @@ html, body {
     font-size: 1rem;
 }
 
-
 // FOOTER
 
 .footer {
@@ -178,7 +177,6 @@ html, body {
         @include tablet-desktop {
             @include font-small-tab-desktop;
         }    
-    }
-    
+    }    
 }   
     

@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function createCommentElement(comment) {
         
-    
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment-container';
     
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dateEl = document.createElement('p');
         dateEl.className = 'comment__date';
         dateEl.textContent = formatDate(comment.date); 
-        console.log(dateEl.textContent);
+        // console.log(dateEl.textContent);
         nameDateDiv.appendChild(dateEl);
     
         const paragraphDiv = document.createElement('div');
@@ -70,16 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
         commentPara.textContent = comment.comment;   
         paragraphDiv.appendChild(commentPara);
         
-        console.log(commentDiv)
+        // console.log(commentDiv)
         return commentDiv;
-    
     }
     
     // Function to format Date
     
-
     function formatDate(dateString) {
-        console.log(dateString)
+        // console.log(dateString)
         if (dateString.includes('-')){
             const [year, month, day] = dateString.split('-');
             const newMonth = month.padStart(2, '0');
@@ -89,11 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const date = new Date(dateString);
             const day = String(date.getUTCDate()).padStart(2, '0');
             const month = String(date.getUTCMonth() + 1).padStart(2, '0');
-            // return `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}`;
             const year = date.getUTCFullYear();
             return `${month}/${day}/${year}` ;
-        }
-        
+        }        
     }
 
     // Function to render comments
@@ -106,8 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
             commentContainer.appendChild(commentElement);
         });
     }
-    
-    
+        
     //  Initial render
     
     renderComments();
