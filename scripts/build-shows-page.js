@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const dateValueSpan = document.createElement('span');
             dateValueSpan.className = 'show__date';
-            dateValueSpan.textContent = 'show.date';
+            dateValueSpan.textContent = show.date;
             dateSectionDiv.appendChild(dateValueSpan);
 
             // VENUE Section
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const venueValueSpan = document.createElement('span');
             venueValueSpan.className = 'show__venue';
-            venueValueSpan.textContent = 'show.venue';
+            venueValueSpan.textContent = show.venue;
             venueSectionDiv.appendChild(venueValueSpan);
 
             // LOCATION Section
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const locationValueSpan = document.createElement('span');
             locationValueSpan.className = 'show__location';
-            locationValueSpan.textContent = 'show.location';
+            locationValueSpan.textContent = show.location;
             locationSectionDiv.appendChild(locationValueSpan);
 
             // BUTTON Section
@@ -117,16 +117,42 @@ document.addEventListener('DOMContentLoaded', () => {
             showDiv.appendChild(buttonSectionDiv);
 
             const buttonTextDiv = document.createElement('div');
-            buttonTextDiv.className = 'show__label';
-            buttonTextDiv.textContent = 'BUTTON';
+            buttonTextDiv.className = 'show__button';
+            buttonTextDiv.textContent = 'BUY TICKETS';
             buttonSectionDiv.appendChild(buttonTextDiv);
 
 
             // Add click events to highlight the selected show
-        })
+            showDiv.addEventListener('click', function() {
+                const selectedShow = document.querySelector('.show-selected');
+                console.log('selected show:', selectedShow);
+
+                if(selectedShow) {
+                    selectedShow.classList.remove('show-selected');
+                }
+
+                showDiv.classList.add('show-selected');
+                console.log('show selected:', showDiv);
+            });
+
+            showsContainer.appendChild(showDiv);
+            console.log('showDiv appended to showsContainer');
+
+            // Add a divideer after each show           
+            const dividerDiv = document.createElement('div');
+            dividerDiv.className = 'show-divider'
+            showsContainer.appendChild(dividerDiv);
+            console.log('Divider appended after show:', show);
+
+        });
     }
 
+    // Initial render
     renderShows();
+    console.log('Initial render complete');
+
+    window.addEventListener('resize', renderShows);  // Re-render on window resize
+    console.log('Resize event listener added');
 
 });
     // Function to create Heading row (for tablet and desktop view)

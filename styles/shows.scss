@@ -130,12 +130,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     
+    &::before {
+        content: "";
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(50, 50, 50, 0.5);
+        z-index: 1;
+    }
 
+    &__heading,
+    &__sub-section {
+        position: relative;
+        z-index: 2;
+    }
     
     &__heading {
         font-size: 16px;
         font-weight: 700;
+      
     }
 
     &__sub-section {
@@ -204,68 +221,143 @@
         border-radius: 5px;
 
     }
+
+    
 }
 
 // SHOWS BLOCK
 
 main {
+    @include desktop {
+        width: 100%;
+        display: flex;
+    }
+}
 
-    .shows {
-        padding: 28px 16px 8px 16px; 
-    
-        &__title {
-            font-size: 32px;
-        }
+.shows {
+    padding: 32px 16px 0 16px; 
+
+    @include tablet {
+        padding: 48px 36px 0 36px;
     }
 
-    .shows-container {
+    @include desktop {
+        padding: 48px 120px;
+    }
 
-        .show {
-            padding: 16px;
+    &__title {
+        font-size: 28px;
 
-            // @include tablet-desktop {
-            //     display: flex;
-            //     flex-direction: row;
-            // }
+        @include tablet-desktop {
+            font-size: 36px;
+        }
+    }
+}
 
+.shows-container {
+    // padding: 16px 0;
+    padding: 36px 0;
+
+    @include desktop {
+        width: 100%;
+        padding-top : 70px;
+        padding-right: 120px;
+    }
+
+    .show-headings {
+        display: none;
+    
+        @include tablet-desktop {
+            padding: 0 36px 16px 36px;
+            display: flex;
+            justify-content: space-between;
+            color: $primary-silver;
+            font-size: 14px;
+            font-weight: 600; 
+        }
+    }
+    
+    .show {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        @include tablet-desktop {
+            padding: 16px 36px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        &:hover {
+            background-color: $secondary-silver;
+            cursor: pointer;
+        }
+    
+        &-selected {
+            background-color: #f8eff7;
+            // border: 3px solid $primary-silver;
+            border: 3px solid #f8dcf1;
+
+            &:hover {
+                background-color: #f8eff7;                
+            }
+        }
+
+        .show__section {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+    
             .show__label {
                 color: $primary-silver;
                 font-size: 13px;
                 font-weight: 600;
-            }
 
+                @include tablet-desktop {
+                    display: none;
+                }
+            }
             .show__date {
-                color: $primary-black;
-                font-size: 15px;
-                font-weight: 600;
+                color: $secondary-black;
+                font-size: 16px;
+                font-weight: 700;
             }
-
+    
             .show__venue, .show__location {
                 color: $secondary-black;
-                font-size: 15px;
-                font-weight: normal;
+                font-size: 16px;
+                font-weight: 400;
             }
-
+    
             .show__button {
-                width: 100%;
-                padding: 10px 0;
                 color: $primary-white;
                 background-color: $primary-black;
+                display: flex;
+                justify-content: center;
+                padding: 8px;
                 border-radius: 4px;
-                border: none;
-                font-size: 13px;
-                font-weight: 600;;
-
-            }
-        }
-        
-    }
-
-    .show-divider {
-        border-top: 2px solid $primary-silver;        
+    
+            }             
+        }    
     }
     
+    .show-divider {
+        border : 1px solid $secondary-silver;
+
+        @include tablet {
+            margin: 0 16px;
+        }
+    }
 }
+
+
+
+
+  
 
 
 

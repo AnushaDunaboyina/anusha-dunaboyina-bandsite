@@ -308,6 +308,21 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
+  z-index: 1;
+}
+.hero__heading, .hero__sub-section {
+  position: relative;
+  z-index: 2;
 }
 .hero__heading {
   font-size: 16px;
@@ -370,40 +385,122 @@ html, body {
   border-radius: 5px;
 }
 
-main .shows {
-  padding: 28px 16px 8px 16px;
+@media screen and (min-width: 1280px) {
+  main {
+    width: 100%;
+    display: flex;
+  }
 }
-main .shows__title {
-  font-size: 32px;
+
+.shows {
+  padding: 32px 16px 0 16px;
 }
-main .shows-container .show {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows {
+    padding: 48px 36px 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    padding: 48px 120px;
+  }
+}
+.shows__title {
+  font-size: 28px;
+}
+@media screen and (min-width: 768px) {
+  .shows__title {
+    font-size: 36px;
+  }
+}
+
+.shows-container {
+  padding: 36px 0;
+}
+@media screen and (min-width: 1280px) {
+  .shows-container {
+    width: 100%;
+    padding-top: 70px;
+    padding-right: 120px;
+  }
+}
+.shows-container .show-headings {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows-container .show-headings {
+    padding: 0 36px 16px 36px;
+    display: flex;
+    justify-content: space-between;
+    color: #AFAFAF;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+.shows-container .show {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
-main .shows-container .show .show__label {
+@media screen and (min-width: 768px) {
+  .shows-container .show {
+    padding: 16px 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.shows-container .show:hover {
+  background-color: #E1E1E1;
+  cursor: pointer;
+}
+.shows-container .show-selected {
+  background-color: #f8eff7;
+  border: 3px solid #f8dcf1;
+}
+.shows-container .show-selected:hover {
+  background-color: #f8eff7;
+}
+.shows-container .show .show__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.shows-container .show .show__section .show__label {
   color: #AFAFAF;
   font-size: 13px;
   font-weight: 600;
 }
-main .shows-container .show .show__date {
-  color: #323232;
-  font-size: 15px;
-  font-weight: 600;
+@media screen and (min-width: 768px) {
+  .shows-container .show .show__section .show__label {
+    display: none;
+  }
 }
-main .shows-container .show .show__venue, main .shows-container .show .show__location {
+.shows-container .show .show__section .show__date {
   color: #000000;
-  font-size: 15px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 700;
 }
-main .shows-container .show .show__button {
-  width: 100%;
-  padding: 10px 0;
+.shows-container .show .show__section .show__venue, .shows-container .show .show__section .show__location {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+.shows-container .show .show__section .show__button {
   color: #FFFFFF;
   background-color: #323232;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
   border-radius: 4px;
-  border: none;
-  font-size: 13px;
-  font-weight: 600;
 }
-main .show-divider {
-  border-top: 2px solid #AFAFAF;
+.shows-container .show-divider {
+  border: 1px solid #E1E1E1;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows-container .show-divider {
+    margin: 0 16px;
+  }
 }/*# sourceMappingURL=shows.css.map */
