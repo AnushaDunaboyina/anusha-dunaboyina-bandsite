@@ -346,9 +346,10 @@ main {
                 @include font-large-bold-mobile;
             }
     
-            .show__venue, .show__location {
+            .show__venue, 
+            .show__location {
                 color: $secondary-black;
-                @include font-large-mobile;
+                @include font-large-normal-mobile;
             }
         } 
 
@@ -360,11 +361,11 @@ main {
                 color: $primary-white;
                 background-color: $primary-black;
                 display: flex;
-                justify-content: center;
-                
-                padding: 0.875rem;
+                justify-content: center;               
+                padding: 0.75rem;
                 border-radius: 0.25rem;
                 @include font-large-bold-mobile;
+
             }   
         }      
     }              

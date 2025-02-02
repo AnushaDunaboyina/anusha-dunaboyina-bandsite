@@ -85,6 +85,11 @@
     font-weight: 500;
 }
 
+@mixin font-large-normal-mobile {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 @mixin font-medium-mobile {
     font-size: 0.875rem;
     font-weight: 600;

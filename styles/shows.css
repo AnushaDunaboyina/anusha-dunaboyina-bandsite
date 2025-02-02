@@ -511,10 +511,11 @@ html, body {
   font-size: 1rem;
   font-weight: 700;
 }
-.shows-container .show__section .show__venue, .shows-container .show__section .show__location {
+.shows-container .show__section .show__venue,
+.shows-container .show__section .show__location {
   color: #000000;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 .shows-container .show__section-button {
   width: 100%;
@@ -525,7 +526,7 @@ html, body {
   background-color: #323232;
   display: flex;
   justify-content: center;
-  padding: 0.875rem;
+  padding: 0.75rem;
   border-radius: 0.25rem;
   font-size: 1rem;
   font-weight: 700;
