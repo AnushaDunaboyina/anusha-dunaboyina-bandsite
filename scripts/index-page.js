@@ -113,9 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const commentText = commentInput.value.trim();
 
         if (name.length === 0 || commentText.length === 0) {   // input validation
-            alert("Please fill out fields.");
+            alert("Please fill out the fields.");
             return;
         }
+
         
         const newComment = {                                   // Creating new comment object
             name: name,
