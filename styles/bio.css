@@ -625,11 +625,11 @@ html, body {
   font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
 }
 @media screen and (min-width: 768px) {
-  .comment-section__form .comment-section__button-div {
+  .comment-section__form .comment-section__button-container {
     align-self: flex-end;
   }
 }
-.comment-section__form .comment-section__button-div .comment-section__button {
+.comment-section__form .comment-section__button-container .comment-section__button {
   width: 100%;
   background-color: #323232;
   color: white;
@@ -640,11 +640,11 @@ html, body {
   font-size: 0.875rem;
   font-weight: 600;
 }
-.comment-section__form .comment-section__button-div .comment-section__button:hover {
+.comment-section__form .comment-section__button-container .comment-section__button:hover {
   background-color: #000000;
 }
 @media screen and (min-width: 768px) {
-  .comment-section__form .comment-section__button-div .comment-section__button {
+  .comment-section__form .comment-section__button-container .comment-section__button {
     width: auto;
     padding: 0.75rem 2.125rem;
   }

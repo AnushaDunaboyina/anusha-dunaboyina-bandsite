@@ -114,10 +114,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (name.length === 0 || commentText.length === 0) {   // input validation
             alert("Please fill out the fields.");
-            return;
+            return;         
         }
-
-        
+       
         const newComment = {                                   // Creating new comment object
             name: name,
             date: new Date().toISOString().split('T')[0],
@@ -134,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         renderComments();                                     // Re-render the comments
 
         event.target.querySelector('#name').value = '';       // Clearing the form
-        event.target.querySelector('#comment').value = '';       
+        event.target.querySelector('#comment').value = '';    
     });
 });
 
