@@ -160,7 +160,7 @@
         flex-direction: column;
         justify-content: space-between;
         
-        gap: 22px;
+        // gap: 22px;
         font-size: 24px;
         font-weight: 700;
 
@@ -201,18 +201,29 @@
     }
 
     @include desktop {
-        height: 600px;
+        height: 700px;
         padding: 13rem 7.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+
+        &__heading {
+            font-size: 28px;
+        }
 
         &__sub-section {
-            font-size: 46px;
+            font-size: 52px;
             font-weight:700;
             display: flex;
+            flex-direction: row;
+            justify-content: center;
             gap: 130px;
 
             &--audio {
-                height: 140px;
+                height: 100%;
                 width: 75%;
+                
             }
         }
     }
@@ -255,7 +266,6 @@ main {
 }
 
 .shows-container {
-    // padding: 16px 0;
     padding: 36px 0;
 
     @include desktop {
@@ -268,12 +278,24 @@ main {
         display: none;
     
         @include tablet-desktop {
-            padding: 0 36px 16px 36px;
+            padding: 0 36px 24px 36px;
             display: flex;
             justify-content: space-between;
             color: $primary-silver;
             font-size: 14px;
             font-weight: 600; 
+
+            &__date,
+            &__venue,
+            &__location,
+            &__button {
+                flex: 1;
+                text-align: left;
+            }
+
+            &__button {
+                text-align: right;
+            }
         }
     }
     
@@ -281,15 +303,17 @@ main {
         padding: 16px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: self-start;
         gap: 16px;
 
+     
         @include tablet-desktop {
-            padding: 16px 36px;
+            padding: 24px 36px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-
+            align-items: center;   
+            gap: 0;       
         }
 
         &:hover {
@@ -307,11 +331,17 @@ main {
             }
         }
 
-        .show__section {
+
+        &__section {
             display: flex;
             flex-direction: column;
             gap: 2px;
-    
+
+            @include tablet-desktop {
+                flex: 1;
+                text-align: left;             
+            }
+
             .show__label {
                 color: $primary-silver;
                 font-size: 13px;
@@ -321,6 +351,7 @@ main {
                     display: none;
                 }
             }
+
             .show__date {
                 color: $secondary-black;
                 font-size: 16px;
@@ -332,18 +363,28 @@ main {
                 font-size: 16px;
                 font-weight: 400;
             }
-    
+        } 
+
+
+        &__section-button {
+
+            width: 100%;
+
             .show__button {
+                width: 100%;
                 color: $primary-white;
                 background-color: $primary-black;
                 display: flex;
                 justify-content: center;
-                padding: 8px;
+                
+                padding: 14px;
                 border-radius: 4px;
+                font-size: 16px;
+                font-weight: 600;
+            }   
+        }      
+    }              
     
-            }             
-        }    
-    }
     
     .show-divider {
         border : 1px solid $secondary-silver;

@@ -332,7 +332,6 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 22px;
   font-size: 24px;
   font-weight: 700;
 }
@@ -367,17 +366,26 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 600px;
+    height: 700px;
     padding: 13rem 7.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+  .hero__heading {
+    font-size: 28px;
   }
   .hero__sub-section {
-    font-size: 46px;
+    font-size: 52px;
     font-weight: 700;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 130px;
   }
   .hero__sub-section--audio {
-    height: 140px;
+    height: 100%;
     width: 75%;
   }
 }
@@ -429,27 +437,36 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .shows-container .show-headings {
-    padding: 0 36px 16px 36px;
+    padding: 0 36px 24px 36px;
     display: flex;
     justify-content: space-between;
     color: #AFAFAF;
     font-size: 14px;
     font-weight: 600;
   }
+  .shows-container .show-headings__date, .shows-container .show-headings__venue, .shows-container .show-headings__location, .shows-container .show-headings__button {
+    flex: 1;
+    text-align: left;
+  }
+  .shows-container .show-headings__button {
+    text-align: right;
+  }
 }
 .shows-container .show {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: self-start;
   gap: 16px;
 }
 @media screen and (min-width: 768px) {
   .shows-container .show {
-    padding: 16px 36px;
+    padding: 24px 36px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 0;
   }
 }
 .shows-container .show:hover {
@@ -463,38 +480,50 @@ html, body {
 .shows-container .show-selected:hover {
   background-color: #f8eff7;
 }
-.shows-container .show .show__section {
+.shows-container .show__section {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
-.shows-container .show .show__section .show__label {
+@media screen and (min-width: 768px) {
+  .shows-container .show__section {
+    flex: 1;
+    text-align: left;
+  }
+}
+.shows-container .show__section .show__label {
   color: #AFAFAF;
   font-size: 13px;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
-  .shows-container .show .show__section .show__label {
+  .shows-container .show__section .show__label {
     display: none;
   }
 }
-.shows-container .show .show__section .show__date {
+.shows-container .show__section .show__date {
   color: #000000;
   font-size: 16px;
   font-weight: 700;
 }
-.shows-container .show .show__section .show__venue, .shows-container .show .show__section .show__location {
+.shows-container .show__section .show__venue, .shows-container .show__section .show__location {
   color: #000000;
   font-size: 16px;
   font-weight: 400;
 }
-.shows-container .show .show__section .show__button {
+.shows-container .show__section-button {
+  width: 100%;
+}
+.shows-container .show__section-button .show__button {
+  width: 100%;
   color: #FFFFFF;
   background-color: #323232;
   display: flex;
   justify-content: center;
-  padding: 8px;
+  padding: 14px;
   border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
 }
 .shows-container .show-divider {
   border: 1px solid #E1E1E1;
