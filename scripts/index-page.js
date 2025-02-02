@@ -77,17 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to format Date
     
-    // function formatDate(dateString) {
-    //     console.log(dateString)
-    //     const date = new Date(dateString);
-    //     const day = String(date.getUTCDate()).padStart(2, '0');
-    //     const month = String(date.getUTCMonth() + 1).padStart(2, '0');
-    //     // return `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}`;
-    //     const year = date.getUTCFullYear();
-
-    //     return `${month}/${day}/${year}` ;
-    // }
-    
 
     function formatDate(dateString) {
         console.log(dateString)

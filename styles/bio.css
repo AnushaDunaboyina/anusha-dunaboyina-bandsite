@@ -514,15 +514,32 @@ html, body {
 .comment-section {
   padding: 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment-section {
+    padding: 36px;
+  }
+}
 .comment-section__title {
   font-size: 1.5rem;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .comment-section__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+  }
 }
 .comment-section--flex {
   display: flex;
   gap: 16px;
   align-items: flex-start;
   padding: 16px 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment-section--flex {
+    padding: 24px 54px;
+  }
 }
 .comment-section__image .comment-section__avatar {
   height: 40px;
@@ -532,6 +549,8 @@ html, body {
 }
 .comment-section__form {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .comment-section__form .comment-section__field {
   margin-bottom: 15px;
@@ -539,7 +558,7 @@ html, body {
 .comment-section__form .comment-section__field .comment-section__label {
   display: block;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 700;
   color: #AFAFAF;
   margin-bottom: 5px;
 }
@@ -553,11 +572,42 @@ html, body {
   color: #323232;
   background-color: #FAFAFA;
 }
+@media screen and (min-width: 768px) {
+  .comment-section__form .comment-section__field .comment-section__input,
+  .comment-section__form .comment-section__field .comment-section__textarea {
+    padding: 14px;
+  }
+}
 .comment-section__form .comment-section__field .comment-section__textarea {
   resize: vertical;
   min-height: 100px;
 }
-.comment-section__form .comment-section__button {
+.comment-section__form .comment-section__field .comment-section__input::-moz-placeholder {
+  color: #323232;
+  font-size: 14px;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+.comment-section__form .comment-section__field .comment-section__input::placeholder {
+  color: #323232;
+  font-size: 14px;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+.comment-section__form .comment-section__field .comment-section__textarea::-moz-placeholder {
+  color: #323232;
+  font-size: 14px;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+.comment-section__form .comment-section__field .comment-section__textarea::placeholder {
+  color: #323232;
+  font-size: 14px;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .comment-section__form .comment-section__button-div {
+    align-self: flex-end;
+  }
+}
+.comment-section__form .comment-section__button-div .comment-section__button {
   width: 100%;
   background-color: #323232;
   color: white;
@@ -567,8 +617,15 @@ html, body {
   font-size: 16px;
   font-weight: 600;
 }
-.comment-section__form .comment-section__button:hover {
+.comment-section__form .comment-section__button-div .comment-section__button:hover {
   background-color: #000000;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment-section__form .comment-section__button-div .comment-section__button {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
 }
 
 .comment-container {
@@ -576,6 +633,11 @@ html, body {
   display: flex;
   gap: 16px;
   border-top: 2px solid #E1E1E1;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment-container {
+    margin: 0 54px;
+  }
 }
 .comment-container:last-child {
   border-bottom: 2px solid #E1E1E1;
@@ -590,7 +652,9 @@ html, body {
 .comment-container .comment__details {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 8px;
+  width: 100%;
 }
 .comment-container .comment__details .comment__name-date {
   display: flex;
