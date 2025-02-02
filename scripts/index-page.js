@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const commentContainer = document.getElementById('comment-container');
+    const commentContainer = document.getElementById('comments-container');
     const form = document.getElementById('comment-form');
     const nameInput = document.getElementById('name');
     const commentInput = document.getElementById('comment');

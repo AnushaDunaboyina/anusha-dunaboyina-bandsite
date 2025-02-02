@@ -519,6 +519,11 @@ html, body {
     padding: 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment-section {
+    padding: 36px 120px;
+  }
+}
 .comment-section__title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -528,6 +533,7 @@ html, body {
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 2.75rem;
+    padding: 8px 0;
   }
 }
 .comment-section--flex {
@@ -541,11 +547,22 @@ html, body {
     padding: 24px 54px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment-section--flex {
+    padding: 24px 240px;
+  }
+}
 .comment-section__image .comment-section__avatar {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   margin-top: 22px;
+}
+@media screen and (min-width: 1280px) {
+  .comment-section__image .comment-section__avatar {
+    height: 50px;
+    width: 50px;
+  }
 }
 .comment-section__form {
   flex: 1;
@@ -581,6 +598,11 @@ html, body {
 .comment-section__form .comment-section__field .comment-section__textarea {
   resize: vertical;
   min-height: 100px;
+}
+@media screen and (min-width: 1280px) {
+  .comment-section__form .comment-section__field .comment-section__textarea {
+    height: 120px;
+  }
 }
 .comment-section__form .comment-section__field .comment-section__input::-moz-placeholder {
   color: #323232;
@@ -620,58 +642,73 @@ html, body {
 .comment-section__form .comment-section__button-div .comment-section__button:hover {
   background-color: #000000;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .comment-section__form .comment-section__button-div .comment-section__button {
     width: auto;
-    padding: 12px 24px;
+    padding: 12px 34px;
     font-size: 14px;
   }
 }
-
-.comment-container {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment-section #comments-container {
+    padding: 0 54px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-section #comments-container {
+    padding: 0 240px;
+  }
+}
+.comment-section #comments-container .comment-container {
   padding: 16px 0;
   display: flex;
   gap: 16px;
   border-top: 2px solid #E1E1E1;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .comment-container {
-    margin: 0 54px;
+@media screen and (min-width: 768px) {
+  .comment-section #comments-container .comment-container {
+    padding: 24px 0;
   }
 }
-.comment-container:last-child {
+.comment-section #comments-container .comment-container:last-child {
   border-bottom: 2px solid #E1E1E1;
 }
-.comment-container .comment__avatar {
+.comment-section #comments-container .comment-container .comment__avatar {
   background-color: #E1E1E1;
   height: 40px;
   width: 40px;
   border-radius: 50%;
   flex: none;
 }
-.comment-container .comment__details {
+.comment-section #comments-container .comment-container .comment__details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
   width: 100%;
 }
-.comment-container .comment__details .comment__name-date {
+.comment-section #comments-container .comment-container .comment__details .comment__name-date {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
-.comment-container .comment__details .comment__name-date .comment__name {
+.comment-section #comments-container .comment-container .comment__details .comment__name-date .comment__name {
   font-size: 15px;
   font-weight: 600;
 }
-.comment-container .comment__details .comment__name-date .comment__date {
+.comment-section #comments-container .comment-container .comment__details .comment__name-date .comment__date {
   font-size: 14px;
   font-weight: 500;
   color: #AFAFAF;
 }
-.comment-container .comment__details .comment__paragraph-section .comment__paragraph {
+.comment-section #comments-container .comment-container .comment__details .comment__paragraph-section .comment__paragraph {
   font-size: 14px;
   font-weight: 400;
+  line-height: 22px;
   color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .comment-section #comments-container .comment-container .comment__details .comment__paragraph-section .comment__paragraph {
+    line-height: 24px;
+  }
 }/*# sourceMappingURL=bio.css.map */
