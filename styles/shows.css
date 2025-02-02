@@ -302,8 +302,8 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 300px;
-  padding: 36px 16px;
+  height: 18.75rem;
+  padding: 2.25rem 1rem;
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -325,14 +325,14 @@ html, body {
   z-index: 2;
 }
 .hero__heading {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }
 .hero__sub-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .hero__sub-section--audio {
@@ -341,48 +341,48 @@ html, body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero {
-    height: 400px;
-    padding: 42px 32px;
+    height: 25rem;
+    padding: 2.625rem 2rem;
   }
   .hero__heading {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
   }
   .hero__sub-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 42px;
-    font-weight: 600;
     gap: 42px;
+    font-size: 2.625rem;
+    font-weight: 700;
   }
   .hero__sub-section--heading {
-    padding-right: 240px;
+    padding-right: 15rem;
   }
   .hero__sub-section--audio {
-    height: 120px;
+    height: 7.5rem;
     width: 55%;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 700px;
+    height: 43.75rem;
     padding: 13rem 7.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 16px;
+    gap: 1rem;
   }
   .hero__heading {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .hero__sub-section {
-    font-size: 52px;
-    font-weight: 700;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 130px;
+    gap: 8.125rem;
+    font-size: 3.75rem;
+    font-weight: 700;
   }
   .hero__sub-section--audio {
     height: 100%;
@@ -390,7 +390,7 @@ html, body {
   }
 }
 .hero__sub-section--audio {
-  border-radius: 5px;
+  border-radius: 0.313rem;
 }
 
 @media screen and (min-width: 1280px) {
@@ -401,35 +401,40 @@ html, body {
 }
 
 .shows {
-  padding: 32px 16px 0 16px;
+  padding: 2rem 1rem 0 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows {
-    padding: 48px 36px 0 36px;
+    padding: 3rem 2.25rem 0 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows {
-    padding: 48px 120px;
+    padding: 3rem 7.5rem;
   }
 }
 .shows__title {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 @media screen and (min-width: 768px) {
   .shows__title {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 }
 
 .shows-container {
-  padding: 36px 0;
+  padding: 0.875rem 0 1.5rem 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows-container {
+    padding: 2.375rem 0;
+  }
 }
 @media screen and (min-width: 1280px) {
   .shows-container {
     width: 100%;
-    padding-top: 70px;
-    padding-right: 120px;
+    padding-top: 4.375rem;
+    padding-right: 7.5rem;
   }
 }
 .shows-container .show-headings {
@@ -437,11 +442,11 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .shows-container .show-headings {
-    padding: 0 36px 24px 36px;
+    padding: 0 2.25rem 1.5rem 2.25rem;
     display: flex;
     justify-content: space-between;
     color: #AFAFAF;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
   }
   .shows-container .show-headings__date, .shows-container .show-headings__venue, .shows-container .show-headings__location, .shows-container .show-headings__button {
@@ -453,15 +458,15 @@ html, body {
   }
 }
 .shows-container .show {
-  padding: 16px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: self-start;
-  gap: 16px;
+  gap: 1rem;
 }
 @media screen and (min-width: 768px) {
   .shows-container .show {
-    padding: 24px 36px;
+    padding: 1.5rem 2.25rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -483,7 +488,7 @@ html, body {
 .shows-container .show__section {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.125rem;
 }
 @media screen and (min-width: 768px) {
   .shows-container .show__section {
@@ -493,8 +498,8 @@ html, body {
 }
 .shows-container .show__section .show__label {
   color: #AFAFAF;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 0.813rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .shows-container .show__section .show__label {
@@ -503,13 +508,13 @@ html, body {
 }
 .shows-container .show__section .show__date {
   color: #000000;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }
 .shows-container .show__section .show__venue, .shows-container .show__section .show__location {
   color: #000000;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .shows-container .show__section-button {
   width: 100%;
@@ -520,16 +525,16 @@ html, body {
   background-color: #323232;
   display: flex;
   justify-content: center;
-  padding: 14px;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 0.875rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
 .shows-container .show-divider {
-  border: 1px solid #E1E1E1;
+  border: 0.063rem solid #E1E1E1;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows-container .show-divider {
-    margin: 0 16px;
+    margin: 0 1rem;
   }
 }/*# sourceMappingURL=shows.css.map */

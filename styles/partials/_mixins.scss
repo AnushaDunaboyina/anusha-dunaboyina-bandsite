@@ -35,9 +35,15 @@
     font-size: 3.75rem ;
     font-weight: 700;
 }
+
 @mixin font-large-tab-desktop {
     font-size: 2.25rem;
     font-weight: 700;
+}
+
+@mixin font-medium-bold-tab-desktop {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 @mixin font-medium-tab-desktop {
@@ -59,8 +65,18 @@
 
 // Font styles for Mobile
 
+@mixin font-two-extra-large-mobile {
+    font-size: 2.625rem;
+    font-weight: 700;
+}
+
 @mixin font-extra-large-mobile {
     font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@mixin font-large-bold-mobile {
+    font-size: 1rem;
     font-weight: 700;
 }
 
