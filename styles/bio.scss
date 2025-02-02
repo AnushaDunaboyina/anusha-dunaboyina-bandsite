@@ -331,51 +331,51 @@
 // COMMENT SECTION
 
 .comment-section {
-    padding: 16px;
+    padding: 1rem;
 
     @include tablet {
-        padding: 36px;
+        padding: 2.25rem;
     }
 
     @include desktop {
-        padding: 36px 120px;
+        padding: 2.25rem 7.5rem;
     }
 
     &__title {
         @include font-extra-large-mobile;
-        // padding-bottom: 1rem;
+       
         @include tablet-desktop {
             @include font-large-tab-desktop;
             line-height: 2.75rem; 
-            padding: 8px 0;
+            padding: 0.5rem 0;
         }
     }
 
     &--flex {
         display: flex;
-        gap: 16px;
+        gap: 1rem;
         align-items: flex-start; 
-        padding: 16px 0;
+        padding: 1rem 0;
         
         @include tablet {
-            padding: 24px 54px;
+            padding: 1.5rem 3.375rem;
         }
 
         @include desktop {
-            padding: 24px 240px;
+            padding: 1.5rem 15rem;
         }
     }
 
     &__image {
         .comment-section__avatar {
-            height: 40px;
-            width: 40px;
+            height: 2.5rem;
+            width: 2.5rem;
             border-radius: 50%;
-            margin-top: 22px;
+            margin-top: 1.375rem;
 
             @include desktop {
-                height: 50px;
-                width: 50px;
+                height: 3.125rem;
+                width: 3.125rem;
             }
 
         }
@@ -387,49 +387,49 @@
         flex-direction: column;
        
         .comment-section__field {
-            margin-bottom: 15px;
+            margin-bottom: 0.938rem;
 
             .comment-section__label {
                 display: block;
-                font-size: 13px;
+                font-size: 0.813rem;
                 font-weight: 700;
                 color: $primary-silver;
-                margin-bottom: 5px;
+                margin-bottom: 0.313rem;
             }
 
             .comment-section__input,
             .comment-section__textarea {
                 width: 100%;
-                padding: 10px;
-                border: 1px solid $secondary-silver;
-                border-radius: 4px;
-                font-size: 13px;
+                padding: 0.625rem;
+                border: 0.063rem solid $secondary-silver;
+                border-radius: 0.25rem;
+                font-size: 0.813rem;
                 color: $primary-black;
                 background-color: $secondary-white;
 
                 @include tablet-desktop {
-                    padding: 14px;
+                    padding: 0.875rem;
                 }
             }
 
             .comment-section__textarea {
                 resize: vertical;
-                min-height: 100px;
+                min-height: 6.25rem;
 
                 @include desktop {
-                    height: 120px;
+                    height: 7.5rem;
                 }
             }
 
             .comment-section__input::placeholder {
                 color: $primary-black;
-                font-size: 14px;
+                font-size: 0.875rem;
                 font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
             }
 
             .comment-section__textarea::placeholder {
                 color: $primary-black;
-                font-size: 14px;
+                font-size: 0.875rem;
                 font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
             }
         }
@@ -445,11 +445,11 @@
                 width: 100%;
                 background-color: $primary-black;
                 color: white;
-                padding: 12px 20px;
+                padding: 0.75rem 1.25rem;
                 border: none;
-                border-radius: 4px;
-                font-size: 16px;
-                font-weight: 600;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                @include font-medium-mobile;
     
                 &:hover {
                     background-color: $secondary-black;
@@ -457,57 +457,56 @@
     
                 @include tablet-desktop {
                     width: auto;
-                    padding: 12px 34px;
-                    font-size: 14px;
-
+                    padding: 0.75rem 2.125rem;
                 }
             }
-
-        }
-        
+        }       
     }
-
-
 
     // Three Comments Section
 
     #comments-container {
 
         @include tablet {
-            padding: 0 54px;
+            padding: 0 3.375rem;
         }
         
         @include desktop {
-            padding: 0 240px;
+            padding: 0 15rem;
         }
 
         .comment-container {
-            padding: 16px 0;
+            padding: 1rem 0;
             display: flex;
-            gap: 16px; 
-            border-top: 2px solid $secondary-silver; 
+            gap: 1rem; 
+            border-top: 0.125rem solid $secondary-silver; 
 
             @include tablet-desktop {
-                padding: 24px 0;
+                padding: 1.5rem 0;
             }
         
             &:last-child {
-                border-bottom: 2px solid $secondary-silver;
+                border-bottom: 0.125rem solid $secondary-silver;
             }       
             
             .comment__avatar {
                 background-color: $secondary-silver;
-                height: 40px;
-                width: 40px;
+                height: 2.5rem;
+                width: 2.5rem;
                 border-radius: 50%;
                 flex: none;
+
+                @include desktop {
+                    height: 3.125rem;
+                    width: 3.125rem;
+                }
             }
         
             .comment__details {
                 display:flex;
                 flex-direction: column;
                 justify-content: space-between;
-                gap: 8px;
+                gap: 0.5rem;
                 width: 100%;
         
                 .comment__name-date {
@@ -516,13 +515,11 @@
                     align-items: baseline;
         
                     .comment__name {
-                        font-size: 15px;
-                        font-weight: 600;
+                        @include font-medium-mobile;
                     }
         
                     .comment__date {
-                        font-size: 14px;
-                        font-weight: 500;
+                        @include font-small-mobile;
                         color: $primary-silver;
                     }
                 }
@@ -530,13 +527,12 @@
                 .comment__paragraph-section {
         
                     .comment__paragraph {
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 22px;
+                        @include font-small-tab-desktop;
+                        line-height: 1.375rem;
                         color: $secondary-black;
 
                         @include tablet-desktop {
-                            line-height: 24px;;
+                            line-height: 1.5rem;
                         }
                         
                     }
