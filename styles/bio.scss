@@ -3,7 +3,6 @@
 @use "./partials/mixins" as *;
 @use "./partials/font-face";
 
-
 //  HEADER
 
 .header {
@@ -95,8 +94,7 @@
                         }
                     }
                 }
-            }
-           
+            }           
         }
     }
 }
@@ -182,8 +180,7 @@
         @include desktop {
             padding: 0 13.125rem;
         }
-        
-    
+           
         .about-musicians__section {
             @include font-medium-mobile; 
             line-height: 1.125rem;

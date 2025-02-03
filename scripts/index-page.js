@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const nameInput = document.getElementById('name');
     const commentInput = document.getElementById('comment');
 
-
     // Default three comments array
     const comments = [
         {
