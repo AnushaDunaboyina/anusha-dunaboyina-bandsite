@@ -1,7 +1,6 @@
 
-@use "./fonts" ;
 
-
+// Mixins for Media Queries
 
 @mixin mobile {
     @media screen and (max-width: 767px) {
@@ -26,3 +25,92 @@
         @content;
     }
 }
+
+// Mixins for Fonts 
+
+
+// Fonts styles for Tablet and desktop
+
+@mixin font-extra-large-tab-desktop {
+    font-size: 3.75rem ;
+    font-weight: 700;
+}
+
+@mixin font-large-tab-desktop {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+@mixin font-medium-bold-tab-desktop {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@mixin font-medium-tab-desktop {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+@mixin font-small-tab-desktop {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+@mixin font-small-bold-tab-desktop {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+
+
+// Font styles for Mobile
+
+@mixin font-two-extra-large-mobile {
+    font-size: 2.625rem;
+    font-weight: 700;
+}
+
+@mixin font-extra-large-mobile {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@mixin font-large-bold-mobile {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+@mixin font-large-mobile {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@mixin font-large-normal-mobile {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@mixin font-medium-mobile {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+@mixin font-small-mobile {
+    font-size: 0.813rem;
+    font-weight: 400;
+}
+
+@mixin font-small-bold-mobile {
+    font-size: 0.813rem;
+    font-weight: 700;
+}
+
+@mixin font-extra-small-mobile {
+    font-size: 0.625rem;
+    font-weight: 400;
+}
+
+
+
+
+

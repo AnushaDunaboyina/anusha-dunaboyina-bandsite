@@ -1,25 +1,13 @@
+@use './partials/global' ;
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 @use "./partials/font-face";
-@use "./partials/fonts" as *;
-
-* {
-    box-sizing: border-box;
-    margin:0;
-}
-
-html, body {
-    font-family: 'Nunito Sans';  
-    font-size: 1rem;
-}
-
 
 //  HEADER
 
 .header {
     background-color: $primary-black;
     
-
     @include tablet-desktop {
         display: flex;
         flex-wrap: wrap;
@@ -33,7 +21,6 @@ html, body {
         height : 6.25rem;
     }
     
-
     &__title {   
         display: flex;
         justify-content: center;
@@ -43,31 +30,29 @@ html, body {
     &__navigation {
         width: 100%;
                
-        &--list {
+        .navigation__list {
             padding: 0;
             display: flex;
             justify-content: space-around; 
             list-style: none;    
             
-            .header__list {               
+            .navigation__item {               
                 width: 50%;
                 display: flex;
                 justify-content: center;
                 padding-bottom: 0.375rem;
                 border-bottom: 0.313rem solid $primary-black;
-                
-                @include mobile {
-                    &:hover {
-                        border-bottom: 0.313rem solid $primary-white;                      
-                    }
-
-                    &:active {
-                        font-weight: bold;
-                        outline: none;
-                    }
+                              
+                &:hover {
+                    border-bottom: 0.313rem solid $primary-white;                      
                 }
 
-                &--link {
+                &:active {
+                    font-weight: bold;
+                    outline: none;
+                }
+            
+                .navigation__link {
                     text-decoration: none;
                     color: $primary-white;                      
                 }                        
@@ -79,17 +64,21 @@ html, body {
             max-width: 20rem;
             height: 100%;
                    
-            &--list {
+            .navigation__list {
                 width: 100%;              
                 height: 100%;
                 padding: 0 1.25rem;
                               
-                .header__list {
+                .navigation__item {
                     border-bottom: none;
                     padding: 0%;
                     height: 100%;
+
+                    &:hover {
+                        border-bottom: none;
+                    }
                                          
-                    &--link {
+                    .navigation__link {
                         height:100%;
                         display: flex;
                         align-items: center;
@@ -105,14 +94,14 @@ html, body {
                         }
                     }
                 }
-            }
+            }           
         }
     }
 }
 
 // HERO BLOCK
 
-.hero__block {
+.hero {
     position:relative;
     background-image: url(../assets/Images/hero-bio.jpg);
     background-size: cover;
@@ -120,11 +109,8 @@ html, body {
     background-position: center;
     display: flex;
     color: $primary-white;
-    
-    @include mobile {
-        height: 12.5rem;
-    }
-
+    height: 12.5rem;
+   
     @include tablet {
         height: 27.5rem;
     }
@@ -144,16 +130,13 @@ html, body {
         z-index: 1;
     }
 
-    &--title {
+    &__title {
         display: flex;
         align-items: center;
-        z-index: 2;
-
-        @include mobile {
-            @include font-large-mobile;
-            padding: 0 1rem;
-        }
-
+        z-index: 2;        
+        @include font-extra-large-mobile;
+        padding: 0 1rem;
+       
         @include tablet-desktop {
             padding: 0 2.25rem;
             @include font-extra-large-tab-desktop;
@@ -165,13 +148,12 @@ html, body {
     }
 }
 
-
 // ABOUT THE MUSICIANS
 
-.about-musicians__block {
+.about-musicians {
     background-color: $primary-white;
 
-    &--title {
+    &__title {
         padding: 1.5rem 1rem 1rem 1rem;
         @include font-extra-large-mobile;
 
@@ -184,96 +166,92 @@ html, body {
 
         @include desktop {
             padding-left: 7.5rem;
-        }
-
-       
-    }
-}
-
-
-.about-musicians {
-    padding: 0 1rem;
-    background-color: $primary-white;
-
-    @include tablet{
-        padding: 0 6.25rem;
+        }       
     }
 
-    @include desktop {
-        padding: 0 13.125rem;
-    }
+    &__content {
+        padding: 0 1rem;
+        background-color: $primary-white;
     
-
-    &__section {
-        @include font-medium-mobile; 
-        line-height: 1.125rem;
-              
-        &--band-image {
-            height: 10rem;
-            width: 100%;
-            margin: 0; 
-
-            @include tablet {
-                height:22.5rem;
-            }
-
-            @include desktop {
-                height: 26.25rem; 
-            }
-        }  
-        
-        &--quote {
-            padding-top: 1rem;
-            padding-bottom: 0.5rem;
+        @include tablet{
+            padding: 0 6.25rem;
+        }
+    
+        @include desktop {
+            padding: 0 13.125rem;
+        }
+           
+        .about-musicians__section {
+            @include font-medium-mobile; 
             line-height: 1.125rem;
+                  
+            .about-musicians__image {
+                height: 10rem;
+                width: 100%;
+                margin: 0; 
 
-            @include tablet-desktop {
-                @include font-medium-tab-desktop;
-                padding-top: 2.25rem;
-                padding-bottom: 1rem; 
-                line-height: 2rem;
-            }
-        }
+                @include tablet {
+                    height:22.5rem;
+                }
 
-        &--lead-vocalist {
-            margin-top: 0;
-
-            @include tablet-desktop {
-                font-size: 1rem;
-            }
-        }
-    }
-
-    &__Bees-Knees {
-
-        @include tablet-desktop {
-            padding: 2.25rem 0 1rem 0;
-        }
-
-        &--title{
-            @include font-large-mobile; 
-            padding-top: 1.5rem; 
-
-            @include tablet-desktop {
-                font-size: 1.5rem;
-            }
-        }
-
-        &--description{
-
-            @include tablet-desktop {
-                display: flex;
-                gap: 2rem;
-            }
-
-            &-paragraph {
-                @include font-small-mobile;
+                @include desktop {
+                    height: 26.25rem; 
+                }
+            }  
+            
+            .about-musicians__quote {
+                padding-top: 1rem;
+                padding-bottom: 0.5rem;
                 line-height: 1.125rem;
-                padding: 1rem 0;
-
+    
                 @include tablet-desktop {
-                    @include font-small-tab-desktop;
-                    line-height: 1.375rem;
+                    @include font-medium-tab-desktop;
+                    padding-top: 2.25rem;
+                    padding-bottom: 1rem; 
+                    line-height: 2rem;
+                }
+            }
+    
+            .about-musicians__lead-vocalist {
+                margin-top: 0;
+    
+                @include tablet-desktop {
+                    font-size: 1rem;
+                }
+            }
+        }
+    
+        .about-musicians__group {
+    
+            @include tablet-desktop {
+                padding: 2.25rem 0 1rem 0;
+            }
+    
+            &-title{
+                @include font-large-mobile; 
+                padding-top: 1.5rem; 
+    
+                @include tablet-desktop {
+                    font-size: 1.5rem;
+                }
+            }
+    
+            .about-musicians__description {
+    
+                @include tablet-desktop {
+                    display: flex;
+                    gap: 2rem;
+                }
+    
+                .about-musicians__paragraph {
+                    @include font-small-mobile;
+                    line-height: 1.125rem;
+                    padding: 1rem 0;
+    
+                    @include tablet-desktop {
+                        @include font-small-tab-desktop;
+                        line-height: 1.375rem;
+                    }
                 }
             }
         }
@@ -318,7 +296,7 @@ html, body {
             gap: 1.5rem;
         }
     
-        &--individual-image {
+        .photo-gallery__image {
             height: 10rem;
             width: 100%;
             transition: 1s ease;  
@@ -334,193 +312,234 @@ html, body {
             }
         }
 
-        &--individual-image:hover {
+        .photo-gallery__image:hover {
            transform: scale(0.9);
            transition: 0.3s ease;
         }
     }
 }
 
+// COMMENT SECTION
 
-// FOOTER
-
-.footer {
-    background-color: $primary-black;   
-    color: $primary-white;
-    margin: 0;
-    
-    @include mobile {
-        padding: 1.5rem 1rem;    
-        position: relative;
-    }
+.comment-section {
+    padding: 1rem;
 
     @include tablet {
-        padding: 3rem 2.25rem;
-    }  
+        padding: 2.25rem;
+    }
 
     @include desktop {
-        padding: 3rem 7.5rem;
+        padding: 2.25rem 7.5rem;
     }
-}
 
-.get-intouch {
-
-    @include mobile {
-        display:flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
-        gap: 0.875rem;
-    }
-   
-    @include tablet-desktop {
-        display:flex;
-        align-items:baseline;
-
-        @include tablet {
-          
-            justify-content: space-between; 
-            
-            &__title,
-            &__social-icons {
-                flex: 1;            
-            }
-    
-            &__social-icons {
-                margin-right: 100px;
-            }             
+    &__title {
+        @include font-extra-large-mobile;
+       
+        @include tablet-desktop {
+            @include font-large-tab-desktop;
+            line-height: 2.75rem; 
+            padding: 0.5rem 0;
         }
+    }
 
-        .last-child {
-            margin-left: auto;
+    &--flex {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start; 
+        padding: 1rem 0;
+        
+        @include tablet {
+            padding: 1.5rem 3.375rem;
         }
 
         @include desktop {
-            justify-content: flex-start;
-            gap: 4.1rem;
+            padding: 1.5rem 15rem;
         }
     }
+
+    &__image {
+        .comment-section__avatar {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            margin-top: 1.375rem;
+
+            @include desktop {
+                height: 3.125rem;
+                width: 3.125rem;
+            }
+        }
+    }
+
+    &__form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
        
-    &__title {
+        .comment-section__field {
+            margin-bottom: 0.938rem;
 
-        @include mobile {
-            @include font-extra-large-mobile;
-            line-height: 2rem;
+            .comment-section__label {
+                display: block;
+                font-size: 0.813rem;
+                font-weight: 700;
+                color: $primary-silver;
+                margin-bottom: 0.313rem;
+            }
+
+            .comment-section__input,
+            .comment-section__textarea {
+                width: 100%;
+                padding: 0.625rem;
+                border: 0.063rem solid $secondary-silver;
+                border-radius: 0.25rem;
+                font-size: 0.813rem;
+                color: $primary-black;
+                background-color: $secondary-white;
+
+                @include tablet-desktop {
+                    padding: 0.875rem;
+                }
+            }
+
+            .comment-section__textarea {
+                resize: vertical;
+                min-height: 6.25rem;
+
+                @include desktop {
+                    height: 7.5rem;
+                }
+            }
+
+            .comment-section__input::placeholder {
+                color: $primary-black;
+                font-size: 0.875rem;
+                font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+            }
+
+            .comment-section__textarea::placeholder {
+                color: $primary-black;
+                font-size: 0.875rem;
+                font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+            }
         }
 
-        @include tablet-desktop {
-            font-size: 2rem;
-            font-weight: 700;
-            line-height: 2.625rem;           
-        }
-        
-    }
-
-    &__social-icons {
-        display: flex;        
-        gap: 1.5rem;
-
-        &--image {
-            height: 1.5rem;
-            transition: transform 0.3s ease;
+        .comment-section__button-container {
 
             @include tablet-desktop {
-                height: 1.625rem;
-                width: 1.625rem;
+                align-self: flex-end;
+            }
+            
+            .comment-section__button {
+                width: 100%;
+                background-color: $primary-black;
+                color: white;
+                padding: 0.75rem 1.25rem;
+                border: none;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                @include font-medium-mobile;
+    
+                &:hover {
+                    background-color: $secondary-black;
+                }
+    
+                @include tablet-desktop {
+                    width: auto;
+                    padding: 0.75rem 2.125rem;
+                }
+            }
+        }       
+    }
+
+    // Three Comments Section
+
+    #comments-container {
+
+        @include tablet {
+            padding: 0 3.375rem;
+        }
+        
+        @include desktop {
+            padding: 0 15rem;
+        }
+
+        .comment-container {
+            padding: 1rem 0;
+            display: flex;
+            gap: 1rem; 
+            border-top: 0.125rem solid $secondary-silver; 
+
+            @include tablet-desktop {
+                padding: 1.5rem 0;
+            }
+        
+            &:last-child {
+                border-bottom: 0.125rem solid $secondary-silver;
+            }       
+            
+            .comment__avatar {
+                background-color: $secondary-silver;
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 50%;
+                flex: none;
+
+                @include desktop {
+                    height: 3.125rem;
+                    width: 3.125rem;
+                }
+            }
+        
+            .comment__details {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 0.5rem;
+                width: 100%;
+        
+                .comment__name-date {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+        
+                    .comment__name {
+                        @include font-medium-mobile;
+                    }
+        
+                    .comment__date {
+                        @include font-small-mobile;
+                        color: $primary-silver;
+                    }
+                }
+        
+                .comment__paragraph-section {
+        
+                    .comment__paragraph {
+                        @include font-small-tab-desktop;
+                        line-height: 1.375rem;
+                        color: $secondary-black;
+
+                        @include tablet-desktop {
+                            line-height: 1.5rem;
+                        }                       
+                    }
+                }      
             }
         }
-
-        &--image:hover {
-            transform: scale(1.25)
-        }
-    }  
-}
-
-.company {
-    @include tablet-desktop {
-        padding: 3rem 0;
-
-        @include tablet{
-            display: flex;       
-            justify-content: space-between;
-        }
-       
-        @include desktop {
-        display: flex;       
-        justify-content: flex-start;
-            gap: 3.875rem;
-        }
     }
 }
 
-.company__details {   
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-    @include mobile {
-        padding: 1rem 0;
-        gap: 1rem;
-        line-height: 1.125rem;
-    }
 
-    @include tablet-desktop {
-        gap: 1.5rem;
-        line-height: 1.375rem;
-    }
+
+
+
     
-    &--name,
-    &--address {
 
-        @include mobile{
-            @include font-medium-mobile;
-        }
 
-        @include tablet-desktop {
-            @include font-medium-mobile;
-        }        
-    }
 
-    &--email {
-        text-decoration: none;
-        color: $primary-white;
 
-        @include mobile{
-            @include font-small-mobile;
-        }
-
-        @include tablet-desktop {
-            @include font-medium-mobile;
-        }
-    }
-
-    &--email:hover {
-        text-decoration: underline;
-    }
-}
-
-.footer__bandsite-logo {
-    height: 1.25rem;
-    width: 7.5rem;
-
-    @include mobile {
-        position: absolute;
-        margin-top: 1.25rem; 
-        top: 85%; 
-    }
-    
-}
-
-.footer__copyright {
-
-    @include mobile{
-        @include font-extra-small-mobile;
-        margin-top: 3.75rem; 
-    }
-
-    @include tablet-desktop {
-        @include font-small-tab-desktop;
-    }    
-}
 
 
 
