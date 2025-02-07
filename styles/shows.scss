@@ -3,13 +3,11 @@
 @use "./partials/mixins" as *;
 @use "./partials/font-face";
 
-
 //  HEADER
 
 .header {
     background-color: $primary-black;
     
-
     @include tablet-desktop {
         display: flex;
         flex-wrap: wrap;
@@ -23,7 +21,6 @@
         height : 6.25rem;
     }
     
-
     &__title {   
         display: flex;
         justify-content: center;
@@ -314,11 +311,11 @@ main {
         }
     
         &-selected {
-            background-color: #f8eff7;
-            border: 3px solid #f8dcf1;
+            background-color: $secondary-white;
+            border: 3px solid $primary-black;
 
             &:hover {
-                background-color: #f8eff7;                
+                background-color: $secondary-white;                
             }
         }
 
