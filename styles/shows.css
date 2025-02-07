@@ -481,11 +481,11 @@ html, body {
   cursor: pointer;
 }
 .shows-container .show-selected {
-  background-color: #f8eff7;
-  border: 3px solid #f8dcf1;
+  background-color: #FAFAFA;
+  border: 3px solid #323232;
 }
 .shows-container .show-selected:hover {
-  background-color: #f8eff7;
+  background-color: #FAFAFA;
 }
 .shows-container .show__section {
   display: flex;
