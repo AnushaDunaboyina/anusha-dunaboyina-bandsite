@@ -5,8 +5,6 @@ const form = document.getElementById('comment-form');
 const nameInput = document.getElementById('name');
 const commentInput = document.getElementById('comment');
 
-// 
-
 // Function to create a single comment element
 
 function createCommentElement(comment) {
@@ -58,29 +56,12 @@ function formatDate(timeStamp) {
     return `${month}/${day}/${year}`;
 }
 
-// function formatDate(dateString) {
-//     if (dateString.includes('-')){
-//         const [year, month, day] = dateString.split('-');
-//         const newMonth = month.padStart(2, '0');
-//         const newDay = day.padStart(2, '0');
-//         return `${newMonth}/${newDay}/${year}` ;
-//     } else {
-//         const date = new Date(dateString);
-//         const day = String(date.getUTCDate()).padStart(2, '0');
-//         const month = String(date.getUTCMonth() + 1).padStart(2, '0');
-//         const year = date.getUTCFullYear();
-//         return `${month}/${day}/${year}` ;
-//     }        
-// }
-
 // Function to render comments
 
 function renderComments(comments) {
     commentContainer.innerHTML = '';
-
     // sort comments by date in desending order (newest first)
-    comments.sort((a,b) => b.timestamp - a.timeStamp);
-        
+    comments.sort((a,b) => b.timestamp - a.timeStamp);       
     comments.forEach((comment) => {                        // loop through comments and add them to container
         const commentElement = createCommentElement(comment);
         commentContainer.prepend(commentElement);
