@@ -1,8 +1,8 @@
 const API_KEY = "f2ea095f-53f5-4297-ac13-b5b99c7a7097";
+const instance = new BandSiteApi(API_KEY);
+console.log(instance);
+
 const showsContainer = document.getElementById('shows-container');
-
-const api = new BandSiteApi(API_KEY);
-
 
 // Function to create the headings row (for tablet and desktop view)
 function createHeadingsRow() {
@@ -54,7 +54,7 @@ function createShowElement(show) {
 
     const venueValueSpan = document.createElement('span');
     venueValueSpan.classList.add('show__venue');
-    venueValueSpan.textContent = show.venue;
+    venueValueSpan.textContent = show.place;
     venueSectionDiv.appendChild(venueValueSpan);
 
     // LOCATION Section
@@ -113,7 +113,7 @@ async function renderShows() {
     showsContainer.appendChild(headingsRow);
 
     try {
-        const shows = await api.getShows();
+        const shows = await instance.getShows();
 
         shows.forEach(show => {
             const showElement = createShowElement(show);
