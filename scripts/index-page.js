@@ -60,8 +60,8 @@ function formatDate(timeStamp) {
 
 function renderComments(comments) {
     commentContainer.innerHTML = '';
-    // sort comments by date in desending order (newest first)
-    comments.sort((a,b) => b.timestamp - a.timeStamp);       
+    
+    comments.sort((a,b) => b.timestamp - a.timeStamp);    // sort comments by date in desending order (newest first)   
     comments.forEach((comment) => {                        // loop through comments and add them to container
         const commentElement = createCommentElement(comment);
         commentContainer.prepend(commentElement);
@@ -109,7 +109,7 @@ form.addEventListener('submit', (event) => {               // form submission ev
         comment: commentText       
     };
 
-    postComment(newComment);                         // adding new comment to top of the array
+    postComment(newComment);                               // adding new comment to top of the array
 
     event.target.querySelector('#name').value = '';       // Clearing the form
     event.target.querySelector('#comment').value = '';    
