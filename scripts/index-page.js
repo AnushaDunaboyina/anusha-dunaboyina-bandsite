@@ -1,4 +1,4 @@
-
+const api = new BandSiteApi("f2ea095f-53f5-4297-ac13-b5b99c7a7097");
 
 const commentContainer = document.getElementById('comments-container');
 const form = document.getElementById('comment-form');
