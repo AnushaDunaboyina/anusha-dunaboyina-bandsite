@@ -1,6 +1,8 @@
+
 const API_KEY = "f2ea095f-53f5-4297-ac13-b5b99c7a7097";
+
+// create a class instance
 const instance = new BandSiteApi(API_KEY);
-console.log(instance);
 
 const showsContainer = document.getElementById('shows-container');
 
