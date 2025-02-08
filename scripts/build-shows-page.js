@@ -100,8 +100,8 @@ function createShowElement(show) {
 // Function to format the timestamp into a readble date format
 function formatDate(timestamp) {
     const date = new Date(timestamp);
-    const options = {year: 'numeric', month: 'short', day: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
+    const rules = {weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' };
+    return date.toLocaleDateString('en-US', rules).split(',').join('');
 }
 
 // Function to render shows dynamically
