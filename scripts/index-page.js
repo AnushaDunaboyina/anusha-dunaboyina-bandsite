@@ -12,7 +12,6 @@ const commentInput = document.getElementById('comment');
 function createCommentElement(comment) {
     
     const commentDiv = document.createElement('div');
-    // commentDiv.className = 'comment-container';
     commentDiv.classList.add('comment-container');
 
     const avatarDiv = document.createElement('div');
@@ -34,7 +33,7 @@ function createCommentElement(comment) {
 
     const dateEl = document.createElement('p');
     dateEl.classList.add('comment__date');
-    dateEl.textContent = formatDate(comment.date); 
+    dateEl.textContent = formatDate(comment.timestamp); 
     nameDateDiv.appendChild(dateEl);
 
     const paragraphDiv = document.createElement('div');
@@ -51,36 +50,68 @@ function createCommentElement(comment) {
 
 // Function to format Date
 
-function formatDate(dateString) {
-    if (dateString.includes('-')){
-        const [year, month, day] = dateString.split('-');
-        const newMonth = month.padStart(2, '0');
-        const newDay = day.padStart(2, '0');
-        return `${newMonth}/${newDay}/${year}` ;
-    } else {
-        const date = new Date(dateString);
-        const day = String(date.getUTCDate()).padStart(2, '0');
-        const month = String(date.getUTCMonth() + 1).padStart(2, '0');
-        const year = date.getUTCFullYear();
-        return `${month}/${day}/${year}` ;
-    }        
+function formatDate(timeStamp) {
+    const date = new Date(timeStamp);
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+    const year = date.getUTCFullYear();
+    return `${month}/${day}/${year}`;
 }
+
+// function formatDate(dateString) {
+//     if (dateString.includes('-')){
+//         const [year, month, day] = dateString.split('-');
+//         const newMonth = month.padStart(2, '0');
+//         const newDay = day.padStart(2, '0');
+//         return `${newMonth}/${newDay}/${year}` ;
+//     } else {
+//         const date = new Date(dateString);
+//         const day = String(date.getUTCDate()).padStart(2, '0');
+//         const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+//         const year = date.getUTCFullYear();
+//         return `${month}/${day}/${year}` ;
+//     }        
+// }
 
 // Function to render comments
 
-function renderComments() {
+function renderComments(comments) {
     commentContainer.innerHTML = '';
+
+    // sort comments by date in desending order (newest first)
+    comments.sort((a,b) => b.timestamp - a.timeStamp);
         
     comments.forEach((comment) => {                        // loop through comments and add them to container
         const commentElement = createCommentElement(comment);
-        commentContainer.appendChild(commentElement);
+        commentContainer.prepend(commentElement);
     });
 }
     
-//  Initial render
+//  Fetch data from API
+async function getComments() {
+    try {
+        const comments = await api.getComments();
+        renderComments(comments);
+    } catch (error) {
+        console.error(error);
+    }
+}
 
-renderComments();
+// Post comment to API
+async function postComment(newComment) {
+    try {
+        const comment = await api.postComment(newComment);
+        console.log('New comment posted:', comment);
+        getComments();
+    } catch (error) {
+        console.error(error);
+    }
+}
 
+// Initial render
+getComments();
+
+// From submission to add a new comment
 form.addEventListener('submit', (event) => {               // form submission event
     event.preventDefault();
         
@@ -93,19 +124,11 @@ form.addEventListener('submit', (event) => {               // form submission ev
     }
     
     const newComment = {                                   // Creating new comment object
-        name: name,
-        date: new Date().toISOString().split('T')[0],
-        comment: commentText,
-        avatar: ''
+        name: name,         
+        comment: commentText       
     };
 
-    comments.unshift(newComment);                         // adding new comment to top of the array
-
-    // if (comments.length > 3) {                            // removing old comment
-    //     comments.pop();
-    // }
-
-    renderComments();                                     // Re-render the comments
+    postComment(newComment);                         // adding new comment to top of the array
 
     event.target.querySelector('#name').value = '';       // Clearing the form
     event.target.querySelector('#comment').value = '';    

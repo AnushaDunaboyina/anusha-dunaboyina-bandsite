@@ -7,7 +7,6 @@ class BandSiteApi {
         this.apiKey = apiKey;
     };
 
-
     // Create a class method to retrieve shows data from the API
 
     async getShows() {
@@ -20,7 +19,6 @@ class BandSiteApi {
             console.error("Error fetching show data",error);
         }
     }
-
 
     // create a class method to retrieve comments from the API
 
@@ -42,10 +40,15 @@ class BandSiteApi {
         
         try {
             const response = await axios.post(url, commentObj);
+        
+            // const response = await axios.post(url, commentObj, {
+            //     headers: { 'Content-Type': 'application/json' },
+            // });
+             
             return response.data;
+           
         } catch (error) {
             console.error("Error fetching show data",error);
         }
     }
-
 }
