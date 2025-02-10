@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css">
-    <title>BandSite - Home</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./scripts/band-site-api.js"></script>
     <script src="./scripts/index-page.js" defer></script>
+    <title>BandSite - Home</title>
 </head>
 <body>
      <!-- HEADER -->
@@ -14,15 +17,21 @@
         <div class="header__title">
 
             <svg class="header__logo" height="20px" width="120px" xmlns="http://www.w3.org/2000/svg">
-                <a href="./index.html"><image class="header__title--logo" height="20px" width="120px" href="./assets/logos/Logo-bandsite.svg"/></a>
+                <a href="./index.html">
+                    <image class="header__title--logo" height="20px" width="120px" href="./assets/logos/Logo-bandsite.svg"/>
+                </a>
             </svg>
 
         </div>
 
         <nav class="header__navigation">
             <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="./index.html">Biography</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="./pages/shows.html">Shows</a></li>
+                <li class="navigation__item header__list--bio">
+                    <a class="navigation__link header__list--bio-link" href="./index.html">Biography</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="./pages/shows.html">Shows</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -117,9 +126,7 @@
             </div>
 
             <!-- Three default comments from JS -->
-            <div id="comments-container" class="comments-block">
-
-            </div>
+            <div id="comments-container" class="comments-block"></div>
 
         </section>
 
@@ -130,17 +137,25 @@
             <h2 class="footer__contact-title">Get In Touch</h2>
 
             <div class="footer__social-icons">
-                <a href="https://www.instagram.com/" target="blank"><img class="footer__icon" src="./assets/Icons/SVG/Icon-instagram.svg" alt="instagram icon"></a>
+                <a href="https://www.instagram.com/" target="blank">
+                    <img class="footer__icon" src="./assets/Icons/SVG/Icon-instagram.svg" alt="instagram icon">
+                </a>
 
-                <a href="https://www.facebook.com" target="blank"><img class="footer__icon" src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook icon"></a>
+                <a href="https://www.facebook.com" target="blank">
+                    <img class="footer__icon" src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook icon">
+                </a>
 
-                <a href="https://www.twitter.com" target="blank"><img class="footer__icon" src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter icon"></a>
+                <a href="https://www.twitter.com" target="blank">
+                    <img class="footer__icon" src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter icon">
+                </a>
             </div>
 
             <div class="footer__logo last-child">
 
-                <svg class="footer__logo-image" height ="20px" width="120px" xmlns="http://www.w3.org/2000/svg">
-                    <a href="./index.html"><image class="footer__bandsite-logo--image" height="20px" width="120px" href="./assets/logos/Logo-bandsite.svg"/></a>
+                <svg class="footer__logo-image" height="20px" width="120px" xmlns="http://www.w3.org/2000/svg">
+                    <a href="./index.html">
+                        <image class="footer__bandsite-logo--image" height="20px" width="120px" href="./assets/logos/Logo-bandsite.svg"/>
+                    </a>
                 </svg>
 
             </div>
@@ -153,7 +168,9 @@
 
                 <p class="footer__company-address">503 Broadway Penthouse,<br>New York, NY 10012, USA</p>
 
-                <p><a class="footer__company-email" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></p>
+                <p>
+                    <a class="footer__company-email" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+                </p>
             </div>
 
             <div class="footer__company-details">
@@ -161,7 +178,9 @@
 
                 <p class="footer__company-address">Booking Agent for <br>US / South America / Japan</p>
 
-                <p><a class="footer__company-email" href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a></p>
+                <p>
+                    <a class="footer__company-email" href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a>
+                </p>
             </div>
 
             <div class="footer__company-details">
@@ -169,7 +188,9 @@
 
                 <p class="footer__company-address">Booking Agent for <br>UK / EU / AU</p>
 
-                <p><a class="footer__company-email" href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a></p>
+                <p>
+                    <a class="footer__company-email" href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a>
+                </p>
             </div>
         </div>
 

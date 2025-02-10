@@ -57,6 +57,17 @@
                     color: $primary-white;                      
                 }                        
             }
+            
+            // Styles for active link
+            .header__list--bio {
+                border-bottom: 0.313rem solid $primary-white;
+
+                &-link {
+                    text-decoration: none;
+                    color: $primary-white;
+                    font-weight: bold;
+                }
+            }
         } 
 
         @include tablet-desktop {
@@ -91,7 +102,12 @@
                         &:active {
                             font-weight: bold;
                             outline: none;                       
-                        }
+                        }                       
+                    }
+
+                    // Styles for active link 
+                    .header__list--bio-link {
+                        border-bottom: 0.313rem solid $primary-white;
                     }
                 }
             }           
