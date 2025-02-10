@@ -1,4 +1,5 @@
-const API_KEY = "f2ea095f-53f5-4297-ac13-b5b99c7a7097";
+
+const API_KEY = "7ef7eace-c170-40ba-bab9-eecdf9f6b26e";
 
 // create a class instance
 const instance = new BandSiteApi(API_KEY);
