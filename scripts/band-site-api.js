@@ -39,11 +39,6 @@ class BandSiteApi {
 
     try {
       const response = await axios.post(url, commentObj);
-
-      // const response = await axios.post(url, commentObj, {
-      //     headers: { 'Content-Type': 'application/json' },
-      // });
-
       return response.data;
     } catch (error) {
       console.error("Error fetching show data", error);
